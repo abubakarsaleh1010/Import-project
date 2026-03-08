@@ -1,535 +1,835 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
 
-<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Nazim Farms &amp; Agro Allied Limited | Premium Agric Export &middot; Abuja, Nigeria</title>
 <meta name="description" content="Nigeria's premier agricultural commodity export company. Ginger, Sesame, Cashew, Hibiscus, Soya Beans and more. Quality from farm to world markets."/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
-:root {
-  --forest: #1B3A1F;
-  --forest2: #2D5A27;
-  --forest-dark: #0F2213;
-  --gold: #C4922A;
-  --gold2: #E0A830;
-  --cream: #FAF6EE;
-  --cream2: #F2EBD9;
-  --ink: #111A0F;
-  --muted: #666;
-  --border: #E8DFCC;
-}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
-img{display:block;max-width:100%;height:auto}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'DM Sans',sans-serif;background:#FAF6EE;color:#111A0F;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
 a{text-decoration:none;color:inherit}
-button{cursor:pointer;font-family:inherit;border:none;background:none}
+button{cursor:pointer;font-family:'DM Sans',sans-serif;border:none;background:none}
 
 /* ── NAV ── */
-#nav{position:fixed;top:0;left:0;right:0;z-index:900;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1.5rem,5vw,4rem);transition:all .4s}
-#nav.solid{background:rgba(10,18,8,.97);backdrop-filter:blur(20px);box-shadow:0 1px 0 rgba(196,146,42,.2)}
-.nbrand{display:flex;flex-direction:column;cursor:pointer}
-.nbrand-name{font-family:‘Playfair Display’,serif;font-size:.92rem;font-weight:700;color:#fff;letter-spacing:.01em;line-height:1.2}
-.nbrand-sub{font-size:.42rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(196,146,42,.8)}
-.nlinks{display:flex;align-items:center;gap:2rem;list-style:none}
-.nlinks a{font-size:.64rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.7);transition:color .2s;cursor:pointer}
-.nlinks a:hover{color:var(–gold2)}
-.nlinks .ncta{background:var(–gold);color:#fff !important;padding:.4rem 1.2rem;border-radius:3px;transition:background .2s,transform .2s !important}
-.nlinks .ncta:hover{background:var(–gold2);transform:translateY(-1px)}
-#nham{display:none;flex-direction:column;gap:5px;padding:6px}
-#nham span{width:22px;height:2px;background:#fff;border-radius:1px;display:block}
-#mob{display:none;position:fixed;inset:0;z-index:960;background:#060C05;flex-direction:column;align-items:center;justify-content:center;gap:2rem}
-#mob.open{display:flex}
-#mob-x{position:absolute;top:1.2rem;right:1.5rem;font-size:1.5rem;color:rgba(255,255,255,.5);transition:color .2s}
-#mob-x:hover{color:#fff}
-.mb{font-family:‘Playfair Display’,serif;font-size:2.2rem;font-style:italic;color:rgba(255,255,255,.8);background:none;border:none;cursor:pointer;transition:color .2s}
-.mb:hover{color:var(–gold2)}
+#nav{position:fixed;top:0;left:0;right:0;z-index:900;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;transition:background .3s,box-shadow .3s}
+#nav.solid{background:rgba(27,58,31,.97);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(196,146,42,.2)}
+.nav-brand{display:flex;flex-direction:column;cursor:pointer}
+.nav-brand-name{font-family:‘Playfair Display’,serif;font-size:1rem;font-weight:700;color:#fff;line-height:1.2;letter-spacing:.01em}
+.nav-brand-sub{font-size:.48rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(196,146,42,.9)}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+.nav-links a{font-size:.7rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.8);transition:color .2s;cursor:pointer}
+.nav-links a:hover{color:#C4922A}
+.nav-cta{background:#C4922A !important;color:#fff !important;padding:.45rem 1.2rem;border-radius:3px}
+.nav-cta:hover{background:#E0A830 !important}
+#ham{display:none;flex-direction:column;gap:5px;padding:5px}
+#ham span{width:22px;height:2px;background:#fff;border-radius:1px;display:block;transition:all .3s}
+
+/* ── MOBILE MENU ── */
+#mob-menu{display:none;position:fixed;inset:0;z-index:950;background:#111A0F;flex-direction:column;align-items:center;justify-content:center;gap:2rem}
+#mob-menu.open{display:flex}
+#mob-close{position:absolute;top:1.2rem;right:1.5rem;font-size:1.6rem;color:#fff}
+.mob-brand{position:absolute;top:1.1rem;left:1.4rem;font-family:‘Playfair Display’,serif;font-size:.9rem;color:#fff;font-weight:700}
+.mob-nav-link{font-family:‘Playfair Display’,serif;font-size:2.2rem;font-style:italic;color:#fff;cursor:pointer;transition:color .2s}
+.mob-nav-link:hover{color:#C4922A}
 
 /* ── HERO ── */
 #hero{position:relative;min-height:100vh;display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
-.hl{background:var(–forest-dark);display:flex;align-items:center;padding:8rem clamp(1.5rem,5vw,4rem) 5rem;position:relative;z-index:2}
-.hl::after{content:’’;position:absolute;right:-70px;top:0;bottom:0;width:140px;background:var(–forest-dark);transform:skewX(-3.5deg);z-index:1}
-.hl-inner{position:relative;z-index:3;max-width:500px}
-.htag{display:inline-flex;align-items:center;gap:.5rem;font-size:.55rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(196,146,42,.9);margin-bottom:1.5rem;padding:.28rem .9rem;border:1px solid rgba(196,146,42,.2);border-radius:100px;background:rgba(196,146,42,.07)}
-.htag::before{content:’’;width:14px;height:1.5px;background:var(–gold)}
-h1.hero-h1{font-family:‘Playfair Display’,serif;font-size:clamp(2.1rem,4vw,3.9rem);font-weight:800;line-height:1.07;color:#fff;margin-bottom:1.3rem;letter-spacing:-.02em}
-h1.hero-h1 em{font-style:italic;color:var(–gold)}
-.hero-p{font-size:.86rem;color:rgba(255,255,255,.62);line-height:1.98;max-width:390px;margin-bottom:2.2rem}
-.hbtns{display:flex;gap:.75rem;flex-wrap:wrap}
-.hr{position:relative;overflow:hidden}
-.hslide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.4s ease}
-.hslide.on{opacity:1}
-.hov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,18,8,.45) 0%,transparent 60%);z-index:1}
-.hbadge{position:absolute;bottom:2rem;right:2rem;z-index:3;background:rgba(6,12,5,.9);border:1px solid rgba(196,146,42,.3);backdrop-filter:blur(14px);padding:1.1rem 1.5rem;border-radius:8px;text-align:center}
-.hbadge-n{font-family:‘Playfair Display’,serif;font-size:2.2rem;font-weight:800;color:var(–gold);line-height:1}
-.hbadge-l{font-size:.5rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:.28rem}
-.hdots{position:absolute;bottom:1.3rem;left:50%;transform:translateX(-50%);z-index:3;display:flex;gap:.45rem}
-.hd{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.28);border:none;cursor:pointer;padding:0;transition:all .35s}
-.hd.on{background:var(–gold);width:24px;border-radius:4px}
+.hero-left{background:#1B3A1F;display:flex;align-items:center;padding:8rem 5vw 5rem 5vw;position:relative;z-index:2}
+.hero-left::after{content:’’;position:absolute;right:-60px;top:0;bottom:0;width:120px;background:#1B3A1F;transform:skewX(-4deg);z-index:1}
+.hero-grain{position:absolute;inset:0;opacity:.04;background-image:url(“data:image/svg+xml,%3Csvg viewBox=‘0 0 256 256’ xmlns=‘http://www.w3.org/2000/svg’%3E%3Cfilter id=‘noise’%3E%3CfeTurbulence type=‘fractalNoise’ baseFrequency=‘0.9’ numOctaves=‘4’ stitchTiles=‘stitch’/%3E%3C/filter%3E%3Crect width=‘100%25’ height=‘100%25’ filter=‘url(%23noise)’/%3E%3C/svg%3E”);background-size:200px}
+.hero-body{position:relative;z-index:3;max-width:540px}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.58rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(196,146,42,.9);margin-bottom:1.4rem}
+.hero-eyebrow::before{content:’’;width:24px;height:1.5px;background:#C4922A}
+.hero-h1{font-family:‘Playfair Display’,serif;font-size:clamp(2.4rem,4.5vw,4.2rem);font-weight:800;line-height:1.05;color:#fff;margin-bottom:1.2rem}
+.hero-h1 em{font-style:italic;color:#C4922A}
+.hero-p{font-size:.9rem;color:rgba(255,255,255,.68);line-height:1.9;max-width:400px;margin-bottom:2.2rem}
+.hero-btns{display:flex;gap:.75rem;flex-wrap:wrap}
+.hero-right{position:relative;overflow:hidden}
+.hero-right img{width:100%;height:100%;object-fit:cover}
+.hero-right::after{content:’’;position:absolute;inset:0;background:linear-gradient(135deg,rgba(27,58,31,.45) 0%,transparent 60%)}
+.hero-badge{position:absolute;bottom:2rem;right:2rem;z-index:3;background:rgba(17,26,15,.85);border:1.5px solid rgba(196,146,42,.3);backdrop-filter:blur(10px);padding:1rem 1.3rem;border-radius:6px;text-align:center}
+.hero-badge-n{font-family:‘Playfair Display’,serif;font-size:2rem;font-weight:700;color:#C4922A;line-height:1}
+.hero-badge-l{font-size:.55rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:.2rem}
 
 /* ── BUTTONS ── */
-.btn{display:inline-flex;align-items:center;gap:.4rem;font-size:.66rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;padding:.82rem 1.85rem;border-radius:4px;cursor:pointer;transition:all .28s;border:none;white-space:nowrap;font-family:inherit}
-.btn-g{background:linear-gradient(135deg,var(–gold),var(–gold2));color:#fff;box-shadow:0 3px 16px rgba(196,146,42,.3)}
-.btn-g:hover{transform:translateY(-2px);box-shadow:0 7px 22px rgba(196,146,42,.42)}
-.btn-ow{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.38)}
-.btn-ow:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.65)}
-.btn-f{background:var(–forest);color:#fff;box-shadow:0 2px 12px rgba(27,58,31,.22)}
-.btn-f:hover{background:var(–forest2);transform:translateY(-2px);box-shadow:0 6px 20px rgba(27,58,31,.3)}
-.btn-og{background:transparent;color:var(–forest);border:1.5px solid var(–forest)}
-.btn-og:hover{background:var(–forest);color:#fff}
+.btn{display:inline-flex;align-items:center;gap:.4rem;font-size:.7rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:.82rem 1.8rem;border-radius:3px;cursor:pointer;transition:all .25s;border:none}
+.btn-gold{background:#C4922A;color:#fff}
+.btn-gold:hover{background:#E0A830;transform:translateY(-2px)}
+.btn-outline-w{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.45)}
+.btn-outline-w:hover{background:rgba(255,255,255,.1);border-color:#fff}
+.btn-forest{background:#1B3A1F;color:#fff}
+.btn-forest:hover{background:#2D5A27;transform:translateY(-2px)}
+.btn-outline-g{background:transparent;color:#1B3A1F;border:2px solid #1B3A1F}
+.btn-outline-g:hover{background:#1B3A1F;color:#fff}
 
 /* ── TICKER ── */
-.ticker{background:#080E07;border-top:1px solid rgba(196,146,42,.1);border-bottom:1px solid rgba(196,146,42,.08);padding:.6rem 0;overflow:hidden;white-space:nowrap;position:relative}
-.ticker::before,.ticker::after{content:’’;position:absolute;top:0;bottom:0;width:80px;z-index:1;pointer-events:none}
-.ticker::before{left:0;background:linear-gradient(to right,#080E07,transparent)}
-.ticker::after{right:0;background:linear-gradient(to left,#080E07,transparent)}
-.ti{display:inline-flex;animation:scroll 30s linear infinite}
-.titem{padding:0 2rem;font-size:.56rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(196,146,42,.75);display:inline-flex;align-items:center;gap:.6rem}
-@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.ticker{background:#111A0F;padding:.55rem 0;overflow:hidden;white-space:nowrap;position:relative}
+.ticker::before,.ticker::after{content:’’;position:absolute;top:0;bottom:0;width:60px;z-index:1;pointer-events:none}
+.ticker::before{left:0;background:linear-gradient(to right,#111A0F,transparent)}
+.ticker::after{right:0;background:linear-gradient(to left,#111A0F,transparent)}
+.ticker-inner{display:inline-flex;animation:tick 30s linear infinite}
+.ticker-item{display:inline-flex;align-items:center;gap:.5rem;padding:0 1.8rem;font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(196,146,42,.85)}
+.ticker-dot{color:rgba(255,255,255,.12)}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* ── SECTION BASE ── */
-.sec{padding:clamp(4rem,8vw,7rem) clamp(1.5rem,5vw,4rem)}
-.etag{display:inline-flex;align-items:center;gap:.5rem;font-size:.53rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(–gold);margin-bottom:.65rem}
-.etag::before{content:’’;width:16px;height:1.5px;background:var(–gold);border-radius:1px;flex-shrink:0}
-h2.sh{font-family:‘Playfair Display’,serif;font-size:clamp(1.75rem,3vw,2.8rem);font-weight:700;line-height:1.12;color:var(–forest);margin-bottom:.75rem;letter-spacing:-.01em}
-.ssub{font-size:.85rem;color:var(–muted);line-height:1.95;max-width:480px}
-.sechead{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1.5rem;margin-bottom:2.8rem}
+.section{padding:5.5rem 5vw}
+.sec-eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.58rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#C4922A;margin-bottom:.6rem}
+.sec-eyebrow::before{content:’’;width:20px;height:1.5px;background:#C4922A}
+.sec-h2{font-family:‘Playfair Display’,serif;font-size:clamp(1.7rem,3vw,2.7rem);font-weight:700;line-height:1.15;color:#1B3A1F;margin-bottom:.75rem}
+.sec-sub{font-size:.88rem;color:#555;line-height:1.92;max-width:480px}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1.5rem;margin-bottom:2.8rem}
 
 /* ── ABOUT ── */
-#about{background:#fff}
-.ag{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,6vw,5.5rem);align-items:center}
-.aiw{position:relative;padding-bottom:1.8rem;padding-right:1.8rem}
-.ai{border-radius:10px;overflow:hidden;height:490px;box-shadow:0 24px 64px rgba(27,58,31,.16)}
-.ai img{width:100%;height:100%;object-fit:cover}
-.ab{position:absolute;bottom:0;right:0;background:linear-gradient(135deg,var(–forest),var(–forest2));padding:1.3rem 1.8rem;border-radius:8px;text-align:center;box-shadow:0 10px 28px rgba(27,58,31,.3)}
-.ab-n{font-family:‘Playfair Display’,serif;font-size:2.3rem;font-weight:800;color:var(–gold);line-height:1}
-.ab-l{font-size:.5rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:.3rem}
-.ap{font-size:.86rem;color:#555;line-height:2.05;margin-bottom:1rem}
-.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:1.3rem 0 1.9rem}
-.chip{font-size:.56rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.28rem .78rem;border-radius:100px;background:rgba(27,58,31,.07);color:var(–forest);border:1.5px solid rgba(27,58,31,.12)}
+#about{background:#fff;clip-path:polygon(0 0,100% 3%,100% 100%,0 97%);padding:7rem 5vw}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.about-img-wrap{position:relative}
+.about-img{border-radius:6px;overflow:hidden;height:480px}
+.about-img img{width:100%;height:100%;object-fit:cover}
+.about-badge{position:absolute;bottom:-1.2rem;right:-1.2rem;background:#1B3A1F;color:#fff;padding:1.2rem 1.5rem;border-radius:6px;text-align:center;border:3px solid #FAF6EE}
+.about-badge-n{font-family:‘Playfair Display’,serif;font-size:2.1rem;font-weight:700;color:#C4922A;line-height:1}
+.about-badge-l{font-size:.55rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:.2rem}
+.about-text .sec-h2{color:#1B3A1F}
+.about-p{font-size:.88rem;color:#444;line-height:2;margin-bottom:1rem}
+.about-chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:1.2rem 0 1.6rem}
+.chip{font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.28rem .75rem;border-radius:100px;background:rgba(27,58,31,.08);color:#1B3A1F;border:1.5px solid rgba(27,58,31,.15)}
 
 /* ── STATS ── */
-#stats{background:linear-gradient(135deg,var(–forest-dark),#162A18);display:grid;grid-template-columns:repeat(4,1fr);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,4rem)}
-.stat{text-align:center;padding:.8rem;border-right:1px solid rgba(196,146,42,.1)}
+#stats{background:#1B3A1F;padding:3.5rem 5vw;display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{text-align:center;padding:.5rem;border-right:1px solid rgba(196,146,42,.18)}
 .stat:last-child{border:none}
-.stn{font-family:‘Playfair Display’,serif;font-size:2.9rem;font-weight:800;color:var(–gold);line-height:1;letter-spacing:-.02em}
-.stl{font-size:.54rem;font-weight:600;letter-spacing:.17em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-top:.42rem}
+.stat-n{font-family:‘Playfair Display’,serif;font-size:2.8rem;font-weight:700;color:#C4922A;line-height:1}
+.stat-l{font-size:.58rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:.35rem}
 
 /* ── PRODUCTS ── */
-#products{background:var(–cream)}
-.pfilts{display:flex;gap:.45rem;flex-wrap:wrap;margin-bottom:2.5rem}
-.pflt{padding:.36rem 1.1rem;border-radius:100px;font-size:.62rem;font-weight:700;border:1.5px solid var(–border);background:transparent;color:#888;transition:all .25s;letter-spacing:.04em}
-.pflt.on,.pflt:hover{background:var(–forest);color:#fff;border-color:var(–forest);box-shadow:0 2px 12px rgba(27,58,31,.18)}
-.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.pc{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 18px rgba(27,58,31,.06);cursor:pointer;transition:transform .32s,box-shadow .32s;border:1px solid var(–border)}
-.pc:hover{transform:translateY(-8px);box-shadow:0 24px 56px rgba(27,58,31,.14)}
-.pcimg{height:215px;overflow:hidden;position:relative;background:var(–cream2)}
-.pcimg img{width:100%;height:100%;object-fit:cover;transition:transform .55s ease}
-.pc:hover .pcimg img{transform:scale(1.08)}
-.pcimg::after{content:’’;position:absolute;inset:0;background:linear-gradient(to top,rgba(6,12,5,.65) 0%,transparent 55%)}
-.pctag{position:absolute;top:.7rem;left:.7rem;font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:.2rem .65rem;border-radius:100px;color:#fff;z-index:1}
-.cs{background:rgba(139,37,0,.88)}.cd{background:rgba(45,90,39,.88)}.cn{background:rgba(139,94,60,.88)}.cf{background:rgba(139,26,74,.88)}
-.pcb{padding:1.2rem 1.3rem}
-.pcn{font-family:‘Playfair Display’,serif;font-size:1.04rem;font-weight:700;color:var(–forest);margin-bottom:.3rem}
-.pcd{font-size:.73rem;color:#888;line-height:1.78;margin-bottom:.75rem}
-.pcf{display:flex;align-items:center;justify-content:space-between;border-top:1px solid #F0E8DA;padding-top:.65rem}
-.pco{font-size:.56rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#8B5E3C}
-.pca{font-size:.58rem;font-weight:700;color:var(–gold);text-transform:uppercase;letter-spacing:.07em}
+#products{background:#FAF6EE}
+.pfilts{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:2.2rem}
+.pfilt{padding:.35rem 1rem;border-radius:100px;font-size:.66rem;font-weight:700;border:1.5px solid #D8CEB8;background:transparent;color:#666;transition:all .25s}
+.pfilt.on,.pfilt:hover{background:#1B3A1F;color:#fff;border-color:#1B3A1F}
+.prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
+.pcard{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 14px rgba(27,58,31,.07);cursor:pointer;transition:transform .3s,box-shadow .3s;border:1.5px solid #EEE6D8}
+.pcard:hover{transform:translateY(-6px);box-shadow:0 18px 48px rgba(27,58,31,.14)}
+.pcard-img{height:210px;overflow:hidden;position:relative}
+.pcard-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.pcard:hover .pcard-img img{transform:scale(1.07)}
+.pcard-img::after{content:’’;position:absolute;inset:0;background:linear-gradient(to top,rgba(17,26,15,.55),transparent 55%)}
+.pcard-cat{position:absolute;top:.7rem;left:.7rem;font-size:.54rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.2rem .65rem;border-radius:100px;color:#fff;z-index:1}
+.cat-spice{background:#8B2500}.cat-seed{background:#2D5A27}.cat-nut{background:#8B5E3C}.cat-flower{background:#8B1A4A}.cat-grain{background:#1A4A8B}
+.pcard-body{padding:1.15rem}
+.pcard-name{font-family:‘Playfair Display’,serif;font-size:1.05rem;font-weight:700;color:#1B3A1F;margin-bottom:.35rem}
+.pcard-desc{font-size:.76rem;color:#666;line-height:1.72;margin-bottom:.75rem}
+.pcard-foot{display:flex;align-items:center;justify-content:space-between;border-top:1px solid #EEE6D8;padding-top:.65rem}
+.pcard-origin{font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8B5E3C}
+.pcard-cta{font-size:.62rem;font-weight:700;color:#C4922A;text-transform:uppercase;letter-spacing:.06em}
 
 /* ── SERVICES ── */
-#services{background:#fff}
-.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
-.sc{background:var(–cream);border-radius:10px;padding:1.9rem 1.7rem;border:1.5px solid var(–border);transition:all .32s;position:relative;overflow:hidden}
-.sc::before{content:’’;position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(–forest),var(–gold));transform:scaleX(0);transform-origin:left;transition:transform .32s}
-.sc:hover{border-color:rgba(196,146,42,.4);transform:translateY(-5px);box-shadow:0 16px 44px rgba(27,58,31,.1)}
-.sc:hover::before{transform:scaleX(1)}
-.scicon{width:48px;height:48px;border-radius:9px;background:rgba(27,58,31,.08);display:flex;align-items:center;justify-content:center;font-size:1.45rem;margin-bottom:1rem}
-.sc h3{font-family:‘Playfair Display’,serif;font-size:.98rem;font-weight:700;color:var(–forest);margin-bottom:.42rem}
-.sc p{font-size:.75rem;color:var(–muted);line-height:1.88}
+#services{background:#fff;clip-path:polygon(0 3%,100% 0,100% 97%,0 100%);padding:7.5rem 5vw}
+.srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.scard{background:#FAF6EE;border-radius:8px;padding:1.8rem 1.6rem;border:1.5px solid #EEE6D8;transition:border-color .3s,transform .3s,box-shadow .3s}
+.scard:hover{border-color:#C4922A;transform:translateY(-4px);box-shadow:0 12px 36px rgba(27,58,31,.1)}
+.scard-icon{width:48px;height:48px;border-radius:8px;background:rgba(27,58,31,.07);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:.9rem}
+.scard h3{font-family:‘Playfair Display’,serif;font-size:1rem;font-weight:700;color:#1B3A1F;margin-bottom:.4rem}
+.scard p{font-size:.77rem;color:#666;line-height:1.8}
 
 /* ── WHY US ── */
-#whyus{background:linear-gradient(150deg,var(–forest-dark) 0%,#162A18 100%)}
-#whyus .sh{color:#fff}
-#whyus .ssub{color:rgba(255,255,255,.48)}
-#whyus .etag{color:rgba(196,146,42,.88)}
-#whyus .etag::before{background:rgba(196,146,42,.88)}
-.wgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-top:2.8rem}
-.wc{background:rgba(255,255,255,.04);border:1px solid rgba(196,146,42,.11);border-radius:10px;padding:2.1rem 1.9rem;transition:all .32s}
-.wc:hover{background:rgba(255,255,255,.08);border-color:rgba(196,146,42,.35);transform:translateY(-4px)}
-.wnum{font-family:‘Playfair Display’,serif;font-size:3.8rem;font-weight:800;color:rgba(196,146,42,.11);line-height:1;margin-bottom:.5rem}
-.wicon{font-size:1.75rem;margin-bottom:.75rem}
-.wc h3{font-family:‘Playfair Display’,serif;font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:.5rem}
-.wc p{font-size:.76rem;color:rgba(255,255,255,.48);line-height:1.9}
+#whyus{background:#1B3A1F;padding:5.5rem 5vw}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.8rem}
+.wcard{background:rgba(255,255,255,.05);border:1.5px solid rgba(196,146,42,.15);border-radius:8px;padding:2rem 1.8rem;transition:background .3s,border-color .3s}
+.wcard:hover{background:rgba(255,255,255,.09);border-color:rgba(196,146,42,.4)}
+.wcard-num{font-family:‘Playfair Display’,serif;font-size:3.5rem;font-weight:800;color:rgba(196,146,42,.18);line-height:1;margin-bottom:.6rem}
+.wcard-icon{font-size:1.7rem;margin-bottom:.7rem}
+.wcard h3{font-family:‘Playfair Display’,serif;font-size:1.08rem;font-weight:700;color:#fff;margin-bottom:.5rem}
+.wcard p{font-size:.78rem;color:rgba(255,255,255,.55);line-height:1.85}
+#whyus .sec-h2{color:#fff}
+#whyus .sec-sub{color:rgba(255,255,255,.55)}
+#whyus .sec-eyebrow{color:rgba(196,146,42,.9)}
+#whyus .sec-eyebrow::before{background:rgba(196,146,42,.9)}
 
 /* ── TEAM ── */
-#team{background:var(–cream)}
-.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem}
-.tc{background:#fff;border-radius:10px;overflow:hidden;border:1px solid var(–border);transition:transform .32s,box-shadow .32s}
-.tc:hover{transform:translateY(-6px);box-shadow:0 20px 52px rgba(27,58,31,.12)}
-.tcbar{height:5px;background:linear-gradient(90deg,var(–forest) 0%,var(–gold) 60%,var(–gold2) 100%)}
-.tcb{padding:1.8rem}
-.tcav{width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,var(–forest),var(–forest2));display:flex;align-items:center;justify-content:center;font-size:1.55rem;margin-bottom:.88rem;border:3px solid rgba(196,146,42,.16);box-shadow:0 4px 16px rgba(27,58,31,.18)}
-.tcname{font-family:‘Playfair Display’,serif;font-size:1rem;font-weight:700;color:var(–forest);margin-bottom:.18rem;line-height:1.3}
-.tcrole{display:inline-block;font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(–gold);background:rgba(196,146,42,.09);padding:.14rem .58rem;border-radius:100px;margin-bottom:.78rem;margin-top:.12rem}
-.tcdiv{height:1px;background:linear-gradient(90deg,var(–border),transparent);margin-bottom:.82rem}
-.tcbio{font-size:.76rem;color:#666;line-height:1.9;margin-bottom:.95rem}
-.tclinks{border-top:1px solid #F0E8DA;padding-top:.75rem;display:flex;flex-direction:column;gap:.32rem}
-.tcbtn{font-size:.69rem;color:#555;display:inline-flex;align-items:center;gap:.35rem;transition:color .2s;cursor:pointer;background:none;border:none;font-family:inherit;text-align:left;padding:.08rem 0}
-.tcbtn:hover{color:var(–gold)}
+#team{background:#FAF6EE;padding:5.5rem 5vw}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+.tcard{background:#fff;border-radius:8px;overflow:hidden;border:1.5px solid #EEE6D8;transition:transform .3s,box-shadow .3s}
+.tcard:hover{transform:translateY(-5px);box-shadow:0 16px 44px rgba(27,58,31,.12)}
+.tcard-bar{height:4px;background:linear-gradient(90deg,#1B3A1F,#C4922A)}
+.tcard-body{padding:1.6rem}
+.tcard-av{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#1B3A1F,#2D5A27);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:.85rem;border:3px solid rgba(196,146,42,.2)}
+.tcard-name{font-family:‘Playfair Display’,serif;font-size:1rem;font-weight:700;color:#1B3A1F;margin-bottom:.18rem}
+.tcard-role{display:inline-block;font-size:.54rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#C4922A;background:rgba(196,146,42,.1);padding:.14rem .55rem;border-radius:100px;margin-bottom:.7rem}
+.tcard-hr{height:1px;background:#EEE6D8;margin-bottom:.75rem}
+.tcard-bio{font-size:.77rem;color:#555;line-height:1.84;margin-bottom:.85rem}
+.tcard-links{border-top:1px solid #EEE6D8;padding-top:.75rem;display:flex;flex-direction:column;gap:.28rem}
+.tcard-link{font-size:.71rem;color:#1B3A1F;display:flex;align-items:center;gap:.32rem;transition:color .2s}
+.tcard-link:hover{color:#C4922A}
 
 /* ── CONTACT ── */
-#contact{background:#0A0F09}
-#contact .sh{color:#fff}
-#contact .ssub{color:rgba(255,255,255,.48)}
-#contact .etag{color:rgba(196,146,42,.88)}
-#contact .etag::before{background:rgba(196,146,42,.88)}
-.cgrid{display:grid;grid-template-columns:1fr 1.6fr;gap:clamp(2rem,6vw,5rem);margin-top:2.5rem;align-items:start}
-.cih{font-family:‘Playfair Display’,serif;font-size:1.15rem;color:var(–gold);margin-bottom:1.4rem;font-style:italic}
-.cii{display:flex;gap:.8rem;margin-bottom:1.2rem;align-items:flex-start}
-.ciico{width:38px;height:38px;border-radius:8px;background:rgba(196,146,42,.09);border:1px solid rgba(196,146,42,.16);display:flex;align-items:center;justify-content:center;font-size:.88rem;flex-shrink:0}
-.cilabel{font-size:.5rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(196,146,42,.82);font-weight:700;margin-bottom:.25rem}
-.cival{font-size:.81rem;color:rgba(255,255,255,.55);line-height:1.76;display:block}
-.cival:hover{color:var(–gold)}
-.fw{background:rgba(255,255,255,.04);border:1px solid rgba(196,146,42,.11);border-radius:10px;padding:2.1rem}
-.fr{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-bottom:.8rem}
-.fg{display:flex;flex-direction:column;gap:.26rem;margin-bottom:.78rem}
-.fg label{font-size:.5rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(196,146,42,.82);font-weight:700}
-.fg input,.fg select,.fg textarea{padding:.8rem 1rem;border:1.5px solid rgba(255,255,255,.08);border-radius:6px;background:rgba(255,255,255,.05);color:#fff;font-family:inherit;font-size:.83rem;outline:none;transition:border-color .25s,background .25s;width:100%;-webkit-appearance:none}
-.fg input::placeholder,.fg textarea::placeholder{color:rgba(255,255,255,.2)}
-.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:rgba(196,146,42,.55);background:rgba(255,255,255,.08)}
+#contact{background:#111A0F;padding:5.5rem 5vw}
+#contact .sec-h2{color:#fff}
+#contact .sec-sub{color:rgba(255,255,255,.55)}
+#contact .sec-eyebrow{color:rgba(196,146,42,.9)}
+#contact .sec-eyebrow::before{background:rgba(196,146,42,.9)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:4rem;margin-top:2.4rem;align-items:start}
+.ci-h{font-family:‘Playfair Display’,serif;font-size:1.15rem;color:#C4922A;margin-bottom:1.2rem;font-style:italic}
+.ci-item{display:flex;gap:.75rem;margin-bottom:1.1rem;align-items:flex-start}
+.ci-ico{width:36px;height:36px;border-radius:50%;background:rgba(196,146,42,.1);border:1px solid rgba(196,146,42,.2);display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0}
+.ci-item h4{font-size:.54rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(196,146,42,.9);font-weight:700;margin-bottom:.2rem}
+.ci-item p,.ci-item a{font-size:.82rem;color:rgba(255,255,255,.62);line-height:1.7;display:block}
+.ci-item a:hover{color:#C4922A}
+.form-card{background:rgba(255,255,255,.05);border:1.5px solid rgba(196,146,42,.15);border-radius:8px;padding:2rem}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-bottom:.75rem}
+.fg{display:flex;flex-direction:column;gap:.24rem;margin-bottom:.72rem}
+.fg label{font-size:.54rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(196,146,42,.9);font-weight:700}
+.fg input,.fg select,.fg textarea{padding:.78rem .9rem;border:1.5px solid rgba(255,255,255,.1);border-radius:4px;background:rgba(255,255,255,.07);color:#fff;font-family:‘DM Sans’,sans-serif;font-size:.84rem;outline:none;transition:border-color .25s;width:100%;-webkit-appearance:none}
+.fg input::placeholder,.fg textarea::placeholder{color:rgba(255,255,255,.28)}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:#C4922A;background:rgba(255,255,255,.11)}
 .fg select option{color:#111;background:#fff}
-.fg textarea{resize:vertical;min-height:86px}
-.fsub{width:100%;padding:.92rem;background:linear-gradient(135deg,var(–gold),var(–gold2));color:#fff;border:none;border-radius:6px;font-family:inherit;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .28s;box-shadow:0 3px 16px rgba(196,146,42,.28);margin-top:.28rem}
-.fsub:hover{transform:translateY(-2px);box-shadow:0 7px 22px rgba(196,146,42,.42)}
-.fnote{font-size:.58rem;color:rgba(255,255,255,.22);text-align:center;margin-top:.52rem}
-#fok{display:none;text-align:center;padding:.88rem;background:rgba(196,146,42,.09);border:1px solid rgba(196,146,42,.22);border-radius:6px;color:rgba(196,146,42,.92);font-size:.78rem;font-weight:600;margin-top:.65rem}
+.fg textarea{resize:vertical;min-height:82px}
+.submit-btn{width:100%;padding:.9rem;background:#C4922A;color:#fff;border:none;border-radius:4px;font-family:‘DM Sans’,sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:all .28s;margin-top:.28rem}
+.submit-btn:hover{background:#E0A830;transform:translateY(-1px)}
+.form-note{font-size:.62rem;color:rgba(255,255,255,.28);text-align:center;margin-top:.5rem}
+#form-ok{display:none;text-align:center;padding:.85rem;background:rgba(196,146,42,.1);border:1px solid rgba(196,146,42,.3);border-radius:4px;color:rgba(196,146,42,.95);font-size:.8rem;font-weight:600;margin-top:.65rem}
 
 /* ── FOOTER ── */
-footer{background:#040804;color:rgba(255,255,255,.32);padding:clamp(3rem,6vw,4.5rem) clamp(1.5rem,5vw,4rem) clamp(1.5rem,4vw,2.2rem)}
-.fgrid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.2rem;padding-bottom:2.2rem;border-bottom:1px solid rgba(255,255,255,.04)}
-.flogo{font-family:‘Playfair Display’,serif;font-size:.92rem;color:#fff;font-weight:700;line-height:1.4;margin-bottom:.65rem}
-.fdesc{font-size:.73rem;line-height:1.9;max-width:210px;margin-bottom:1rem}
-.fsocials{display:flex;gap:.4rem}
-.fsoc{width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,.09);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.3);font-size:.75rem;transition:all .25s;cursor:pointer;background:none}
-.fsoc:hover{background:var(–gold);border-color:var(–gold);color:#fff;transform:translateY(-2px)}
-.fcol h4{font-size:.5rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(196,146,42,.68);margin-bottom:.95rem;font-weight:700}
-.fcol ul{list-style:none;display:flex;flex-direction:column;gap:.48rem}
-.fcol li button{font-size:.72rem;color:rgba(255,255,255,.32);cursor:pointer;background:none;border:none;font-family:inherit;text-align:left;transition:color .2s;padding:0}
-.fcol li button:hover{color:var(–gold)}
-.fbot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.7rem}
-.fbot p{font-size:.62rem}
+footer{background:#0A0F09;color:rgba(255,255,255,.38);padding:3.5rem 5vw 1.8rem}
+.foot-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.05)}
+.foot-brand-name{font-family:‘Playfair Display’,serif;font-size:.95rem;color:#fff;font-weight:700;line-height:1.35;margin-bottom:.65rem}
+.foot-about{font-size:.75rem;line-height:1.9;max-width:230px;margin-bottom:1rem}
+.socials{display:flex;gap:.42rem}
+.soc{width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.35);font-size:.76rem;transition:all .25s;cursor:pointer}
+.soc:hover{background:#C4922A;border-color:#C4922A;color:#fff;transform:translateY(-2px)}
+.foot-col h4{font-size:.54rem;letter-spacing:.17em;text-transform:uppercase;color:rgba(196,146,42,.75);margin-bottom:.9rem;font-weight:700}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:.45rem}
+.foot-col button{font-size:.74rem;color:rgba(255,255,255,.38);cursor:pointer;background:none;border:none;font-family:‘DM Sans’,sans-serif;text-align:left;transition:color .2s;padding:0}
+.foot-col button:hover{color:#C4922A}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.65rem}
+.foot-bottom p{font-size:.66rem}
 
 /* ── FLOATING ── */
-.wafloat{position:fixed;bottom:2rem;right:2rem;z-index:500;display:flex;flex-direction:column;align-items:flex-end;gap:.4rem}
-.watip{background:var(–forest);color:#fff;padding:.28rem .78rem;border-radius:20px;font-size:.6rem;font-weight:600;white-space:nowrap;opacity:0;transform:translateX(8px);transition:all .28s;pointer-events:none;box-shadow:0 3px 10px rgba(0,0,0,.2)}
-.wafloat:hover .watip{opacity:1;transform:translateX(0)}
-.wabtn{width:54px;height:54px;border-radius:50%;background:#25D366;border:none;cursor:pointer;font-size:1.4rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.35);transition:transform .2s;animation:wap 3s infinite}
-.wabtn:hover{transform:scale(1.08)}
-@keyframes wap{0%,100%{box-shadow:0 4px 18px rgba(37,211,102,.35)}50%{box-shadow:0 4px 30px rgba(37,211,102,.55)}}
-#btt{position:fixed;bottom:6.6rem;right:2.1rem;z-index:500;width:40px;height:40px;border-radius:50%;background:rgba(196,146,42,.9);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .3s;opacity:0;pointer-events:none;box-shadow:0 3px 14px rgba(196,146,42,.28)}
+.wa-float{position:fixed;bottom:1.8rem;right:1.8rem;z-index:500;display:flex;flex-direction:column;align-items:flex-end;gap:.38rem}
+.wa-tip{background:#1B3A1F;color:#fff;padding:.28rem .72rem;border-radius:20px;font-size:.62rem;font-weight:600;white-space:nowrap;opacity:0;transform:translateX(6px);transition:all .28s;pointer-events:none}
+.wa-float:hover .wa-tip{opacity:1;transform:translateX(0)}
+.wa-btn{width:52px;height:52px;border-radius:50%;background:#25D366;border:none;cursor:pointer;font-size:1.35rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,.32);animation:wap 2.5s infinite}
+.wa-btn:hover{transform:scale(1.08)}
+@keyframes wap{0%,100%{box-shadow:0 4px 16px rgba(37,211,102,.3)}50%{box-shadow:0 4px 28px rgba(37,211,102,.55)}}
+#btt{position:fixed;bottom:5.8rem;right:1.9rem;z-index:500;width:38px;height:38px;border-radius:50%;background:#C4922A;color:#fff;border:none;cursor:pointer;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 10px rgba(196,146,42,.28);transition:all .3s;opacity:0;pointer-events:none}
 #btt.show{opacity:1;pointer-events:auto}
-#btt:hover{background:var(–forest);transform:translateY(-2px)}
+#btt:hover{background:#1B3A1F;transform:translateY(-2px)}
 
 /* ── MODAL ── */
-.mbg{display:none;position:fixed;inset:0;z-index:800;background:rgba(4,8,3,.86);align-items:center;justify-content:center;padding:1.5rem;backdrop-filter:blur(10px)}
-.mbg.open{display:flex}
-.mbox{background:#fff;border-radius:12px;max-width:570px;width:100%;max-height:90vh;overflow-y:auto;animation:mshow .32s ease;position:relative}
-@keyframes mshow{from{opacity:0;transform:scale(.95) translateY(18px)}to{opacity:1;transform:none}}
-.mhero{height:245px;background-size:cover;background-position:center;border-radius:12px 12px 0 0;position:relative}
-.mhero::after{content:’’;position:absolute;inset:0;background:linear-gradient(to top,rgba(4,8,3,.82),transparent 50%);border-radius:12px 12px 0 0}
-.mx{position:absolute;top:.9rem;right:.9rem;z-index:2;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.14);border:none;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:.85rem;backdrop-filter:blur(4px);transition:background .2s}
-.mx:hover{background:var(–gold)}
-.mbody{padding:1.8rem}
-.mtag{font-size:.52rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(–gold);margin-bottom:.32rem}
-.mbody h2{font-family:‘Playfair Display’,serif;font-size:1.55rem;font-weight:700;color:var(–forest);margin-bottom:.8rem}
-.mbody p{color:#666;line-height:1.9;font-size:.82rem;margin-bottom:1.2rem}
-.mmeta{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin-bottom:1.2rem}
-.mmi{background:#F5F0E8;border-radius:7px;padding:.78rem;text-align:center}
-.mml{font-size:.48rem;letter-spacing:.13em;text-transform:uppercase;color:#999;margin-bottom:.18rem}
-.mmv{font-family:‘Playfair Display’,serif;font-size:.9rem;font-weight:700;color:var(–forest)}
-.mbtns{display:flex;gap:.7rem;flex-wrap:wrap}
+.modal-bg{display:none;position:fixed;inset:0;z-index:800;background:rgba(17,26,15,.78);align-items:center;justify-content:center;padding:1.5rem;backdrop-filter:blur(6px)}
+.modal-bg.open{display:flex}
+.modal-box{background:#fff;border-radius:8px;max-width:600px;width:100%;max-height:90vh;overflow-y:auto;animation:mIn .3s ease;position:relative}
+@keyframes mIn{from{opacity:0;transform:scale(.96) translateY(12px)}to{opacity:1;transform:none}}
+.modal-img{height:240px;background-size:cover;background-position:center;border-radius:8px 8px 0 0;position:relative}
+.modal-img::after{content:’’;position:absolute;inset:0;background:linear-gradient(to top,rgba(17,26,15,.75),transparent);border-radius:8px 8px 0 0}
+.modal-x{position:absolute;top:.8rem;right:.8rem;z-index:2;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.15);border:none;color:#fff;font-size:.9rem;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
+.modal-x:hover{background:#C4922A}
+.modal-body{padding:1.6rem}
+.modal-cat-tag{font-size:.56rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#C4922A;margin-bottom:.3rem}
+.modal-body h2{font-family:‘Playfair Display’,serif;font-size:1.5rem;font-weight:700;color:#1B3A1F;margin-bottom:.75rem}
+.modal-body p{color:#555;line-height:1.85;font-size:.83rem;margin-bottom:1.1rem}
+.modal-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-bottom:1.1rem}
+.meta-box{background:#F5F0E8;border-radius:5px;padding:.7rem;text-align:center}
+.meta-l{font-size:.52rem;letter-spacing:.1em;text-transform:uppercase;color:#888;margin-bottom:.16rem}
+.meta-v{font-family:‘Playfair Display’,serif;font-size:.9rem;font-weight:700;color:#1B3A1F}
+.modal-acts{display:flex;gap:.6rem;flex-wrap:wrap}
 
-/* ── REVEAL ANIMATION ── */
-.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
-.rv.in{opacity:1;transform:translateY(0)}
+/* ── REVEAL ── */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease}
+.reveal.in{opacity:1;transform:translateY(0)}
 
 /* ── RESPONSIVE ── */
 @media(max-width:960px){
-.nlinks{display:none}#nham{display:flex}
-#hero{grid-template-columns:1fr}.hr{height:55vw;min-height:300px}.hl::after{display:none}
-.ag,.wgrid{grid-template-columns:1fr}.ai{height:280px}.ab{bottom:.5rem;right:.5rem}
-.pgrid{grid-template-columns:1fr 1fr}.sgrid{grid-template-columns:1fr 1fr}
-.tgrid{grid-template-columns:1fr 1fr}.cgrid{grid-template-columns:1fr}
-.fgrid{grid-template-columns:1fr 1fr}
-#stats{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:none}.stat:nth-child(3){border-top:1px solid rgba(196,146,42,.1)}
+.nav-links{display:none}
+#ham{display:flex}
+#hero{grid-template-columns:1fr}
+.hero-right{height:45vw;min-height:280px}
+.hero-left::after{display:none}
+.about-grid{grid-template-columns:1fr}
+.about-img{height:260px}
+.about-badge{bottom:.5rem;right:.5rem}
+.prod-grid{grid-template-columns:1fr 1fr}
+.srv-grid{grid-template-columns:1fr 1fr}
+.why-grid{grid-template-columns:1fr}
+.team-grid{grid-template-columns:1fr 1fr}
+.contact-grid{grid-template-columns:1fr}
+.foot-grid{grid-template-columns:1fr 1fr}
+#stats{grid-template-columns:1fr 1fr}
+.stat:nth-child(2){border-right:none}
+.stat:nth-child(3){border-top:1px solid rgba(196,146,42,.18)}
 }
 @media(max-width:600px){
-.sec{padding:4rem 1.2rem}
-.pgrid,.sgrid,.tgrid{grid-template-columns:1fr}
-.fr{grid-template-columns:1fr}
-#stats{padding:2.8rem 1.2rem}.stn{font-size:2.3rem}
-.fgrid{grid-template-columns:1fr}
-h1.hero-h1{font-size:2rem}.hbtns{flex-direction:column;align-items:flex-start}
-.sechead{flex-direction:column;align-items:flex-start}
-.mmeta{grid-template-columns:1fr 1fr}
-.wafloat{bottom:1.2rem;right:1.2rem}#btt{bottom:5.5rem;right:1.3rem}
+.section{padding:4rem 4.5vw}
+.prod-grid,.srv-grid,.team-grid{grid-template-columns:1fr}
+.frow{grid-template-columns:1fr}
+#stats{padding:2.5rem 4.5vw}
+.stat-n{font-size:2.2rem}
+.foot-grid{grid-template-columns:1fr}
+.hero-h1{font-size:2.2rem}
+.hero-btns{flex-direction:column;align-items:flex-start}
+.sec-head{flex-direction:column;align-items:flex-start}
+.modal-meta{grid-template-columns:1fr 1fr}
+.wa-float{bottom:1.2rem;right:1.2rem}
+#btt{bottom:5.2rem;right:1.3rem}
+#about,#services{clip-path:none;padding:4.5rem 4.5vw}
 }
-</style></head><body>
+</style>
 
-<div class="wafloat"><span class="watip">Chat on WhatsApp</span><button class="wabtn" data-wa>&#x1F4AC;</button></div>
-<button id="btt" data-goto="top" title="Back to top">&#8593;</button>
+</head>
+<body>
+
+<!-- WHATSAPP FLOAT -->
+
+<div class="wa-float">
+  <span class="wa-tip">Chat with us!</span>
+  <button class="wa-btn" data-wa aria-label="WhatsApp">&#x1F4AC;</button>
+</div>
+<button id="btt" data-goto="top" aria-label="Back to top">&#8593;</button>
+
+<!-- NAV -->
+
 <nav id="nav">
-<div class="nbrand" data-goto="top"><span class="nbrand-name">Nazim Farms &amp; Agro Allied</span><span class="nbrand-sub">Premium Export &middot; Abuja, Nigeria</span></div>
-<ul class="nlinks"><li><a data-goto="about">About</a></li><li><a data-goto="products">Products</a></li><li><a data-goto="services">Services</a></li><li><a data-goto="team">Team</a></li><li><a data-goto="contact" class="ncta">Get a Quote</a></li></ul>
-<button id="nham"><span></span><span></span><span></span></button></nav>
-<div id="mob"><button id="mob-x">&#10005;</button>
-<button class="mb" data-goto="about">About</button>
-<button class="mb" data-goto="products">Products</button>
-<button class="mb" data-goto="services">Services</button>
-<button class="mb" data-goto="team">Our Team</button>
-<button class="mb" data-goto="contact">Get a Quote</button>
+  <div class="nav-brand" data-goto="top">
+    <span class="nav-brand-name">Nazim Farms &amp; Agro Allied</span>
+    <span class="nav-brand-sub">Premium Export &middot; Nigeria</span>
+  </div>
+  <ul class="nav-links">
+    <li><a data-goto="about">About</a></li>
+    <li><a data-goto="products">Products</a></li>
+    <li><a data-goto="services">Services</a></li>
+    <li><a data-goto="team">Team</a></li>
+    <li><a data-goto="contact" class="nav-cta">Get a Quote</a></li>
+  </ul>
+  <button id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- MOBILE MENU -->
+
+<div id="mob-menu">
+  <div class="mob-brand">Nazim Farms</div>
+  <button id="mob-close">&#10005;</button>
+  <button class="mob-nav-link" data-goto="about">About</button>
+  <button class="mob-nav-link" data-goto="products">Products</button>
+  <button class="mob-nav-link" data-goto="services">Services</button>
+  <button class="mob-nav-link" data-goto="team">Our Team</button>
+  <button class="mob-nav-link" data-goto="contact">Get a Quote</button>
 </div>
+
+<!-- HERO -->
+
 <section id="hero">
-<div class="hl"><div class="hl-inner">
-<div class="htag">&#x1F33F; Nigeria&rsquo;s Premium Agric Exporter</div>
-<h1 class="hero-h1">From Nigeria&rsquo;s<br/><em>Fertile Fields</em><br/>To World Markets</h1>
-<p class="hero-p">Nazim Farms &amp; Agro Allied Limited specialises in commodity trading and export of premium agricultural produce &mdash; ginger, sesame, cashew, hibiscus and more &mdash; driven by quality and unwavering commitment to excellence.</p>
-<div class="hbtns"><button class="btn btn-g" data-goto="products">&#x1F33E; View Our Products</button><button class="btn btn-ow" data-goto="contact">Request a Quote</button></div>
-</div></div>
-<div class="hr" id="hslides">
-<div class="hslide on" style="background-image:url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1400&q=85&auto=format&fit=crop')"></div>
-<div class="hslide" style="background-image:url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1400&q=85&auto=format&fit=crop')"></div>
-<div class="hslide" style="background-image:url('https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=1400&q=85&auto=format&fit=crop')"></div>
-<div class="hslide" style="background-image:url('https://images.unsplash.com/photo-1536657464919-892534f60d6e?w=1400&q=85&auto=format&fit=crop')"></div>
-<div class="hov"></div>
-<div class="hbadge"><div class="hbadge-n">100%</div><div class="hbadge-l">Organic &amp; Pure</div></div>
-<div class="hdots">
-<button class="hd on" data-i="0"></button>
-<button class="hd" data-i="1"></button>
-<button class="hd" data-i="2"></button>
-<button class="hd" data-i="3"></button>
-</div></div></section>
-<div class="ticker"><div class="ti">
-<span class="titem"><span style="color:rgba(196,146,42,.3);font-size:.5rem">&#x25C6;</span>Ginger</span>
-<span class="titem"><span style="color:rgba(196,146,42,.3);font-size:.5rem">&#x25C6;</span>Sesame Seeds</span>
-<span class="titem"><span style="color:rgba(196,146,42,.3);font-size:.5rem">&#x25C6;</span>Dry Hibiscus</span>
-<span class="titem"><span style="color:rgba(196,146,42,.3);font-size:.5rem">&#x25C6;</span>Soya Beans</span>
-<span class="titem"><span style="color:rgba(196,146,42,.3);font-size:.5rem">&#x25C6;</span>Raw Cashew Nuts</span>
-<span class="titem"><span style="color:rgba(196,146,42,.3);font-size:.5rem">&#x25C6;</span>Groundnuts</span>
-<span class="titem"><span style="color:rgba(196,146,42,.3);font-size:.5rem">&#x25C6;</span>Sunflower</span>
-<span class="titem"><span style="color:rgba(196,146,42,.3);font-size:.5rem">&#x25C6;</span>Maize</span>
-<span class="titem"><span style="color:rgba(196,146,42,.3);font-size:.5rem">&#x25C6;</span>Soya Oil</span>
-<span class="titem"><span style="color:rgba(196,146,42,.3);font-size:.5rem">&#x25C6;</span>Export Ready &middot; Nigeria</span>
-<span class="titem"><span style="color:rgba(196,146,42,.3);font-size:.5rem">&#x25C6;</span>Ginger</span>
-<span class="titem"><span style="color:rgba(196,146,42,.3);font-size:.5rem">&#x25C6;</span>Sesame Seeds</span>
-<span class="titem"><span style="color:rgba(196,146,42,.3);font-size:.5rem">&#x25C6;</span>Dry Hibiscus</span>
-<span class="titem"><span style="color:rgba(196,146,42,.3);font-size:.5rem">&#x25C6;</span>Soya Beans</span>
-<span class="titem"><span style="color:rgba(196,146,42,.3);font-size:.5rem">&#x25C6;</span>Raw Cashew Nuts</span>
-<span class="titem"><span style="color:rgba(196,146,42,.3);font-size:.5rem">&#x25C6;</span>Groundnuts</span>
-<span class="titem"><span style="color:rgba(196,146,42,.3);font-size:.5rem">&#x25C6;</span>Sunflower</span>
-<span class="titem"><span style="color:rgba(196,146,42,.3);font-size:.5rem">&#x25C6;</span>Maize</span>
-<span class="titem"><span style="color:rgba(196,146,42,.3);font-size:.5rem">&#x25C6;</span>Soya Oil</span>
-<span class="titem"><span style="color:rgba(196,146,42,.3);font-size:.5rem">&#x25C6;</span>Export Ready &middot; Nigeria</span>
-</div></div>
-<section class="sec" id="about"><div class="ag">
-<div class="aiw rv"><div class="ai"><img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=900&q=85&auto=format&fit=crop" alt="Nazim Farms operations" loading="lazy"/></div><div class="ab"><div class="ab-n">100%</div><div class="ab-l">Nigerian Owned</div></div></div>
-<div class="rv"><p class="etag">Who We Are</p><h2 class="sh">Elevate Your Agro Business with Nazim Farms</h2>
-<p class="ap">Nazim Farms and Agro Allied Limited was incorporated in Nigeria by Nigerians to provide first-class value-added services. We specialise in commodity trading of agricultural produce through the application of the latest technology equipment and quality standard services to our customers&rsquo; satisfaction.</p>
-<p class="ap">From flavorful spices to nutritious soybean seeds, raw cashew nuts to exotic dry hibiscus flower &mdash; our diverse portfolio caters to valued customers worldwide. We take pride in ensuring every product meets the highest standards of quality, freshness and purity.</p>
-<div class="chips"><span class="chip">&#x1F33F; Crop Production</span><span class="chip">&#x1F91D; Outgrower Programme</span><span class="chip">&#x2708;&#xFE0F; Export Specialists</span><span class="chip">&#x2699;&#xFE0F; Modern Equipment</span><span class="chip">&#x1F4CA; Commodity Trading</span></div>
-<button class="btn btn-f" data-goto="contact">Request a Quote &#8594;</button></div></div></section>
+  <div class="hero-left">
+    <div class="hero-grain"></div>
+    <div class="hero-body">
+      <div class="hero-eyebrow">&#x1F33F; Nigeria&rsquo;s Premium Agric Exporter</div>
+      <h1 class="hero-h1">From Nigeria&rsquo;s<br/><em>Fertile Fields</em><br/>To World Markets</h1>
+      <p class="hero-p">Nazim Farms &amp; Agro Allied Limited specialises in the commodity trading and export of premium agricultural produce &mdash; ginger, sesame, cashew, hibiscus and more &mdash; powered by the latest technology and an unwavering commitment to quality.</p>
+      <div class="hero-btns">
+        <button class="btn btn-gold" data-goto="products">&#x1F33E; View Our Products</button>
+        <button class="btn btn-outline-w" data-goto="contact">Request a Quote</button>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=1200&q=80" alt="Premium farmland aerial view"/>
+    <div class="hero-badge">
+      <div class="hero-badge-n">100%</div>
+      <div class="hero-badge-l">Organic &amp; Pure</div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-inner">
+    <span class="ticker-item"><span class="ticker-dot">&#x25C6;</span>Ginger</span>
+    <span class="ticker-item"><span class="ticker-dot">&#x25C6;</span>Sesame Seeds</span>
+    <span class="ticker-item"><span class="ticker-dot">&#x25C6;</span>Dry Hibiscus</span>
+    <span class="ticker-item"><span class="ticker-dot">&#x25C6;</span>Soya Beans</span>
+    <span class="ticker-item"><span class="ticker-dot">&#x25C6;</span>Raw Cashew Nuts</span>
+    <span class="ticker-item"><span class="ticker-dot">&#x25C6;</span>Groundnuts</span>
+    <span class="ticker-item"><span class="ticker-dot">&#x25C6;</span>Sun Flower</span>
+    <span class="ticker-item"><span class="ticker-dot">&#x25C6;</span>Maize</span>
+    <span class="ticker-item"><span class="ticker-dot">&#x25C6;</span>Soya Oil</span>
+    <span class="ticker-item"><span class="ticker-dot">&#x25C6;</span>Export Ready &middot; Abuja, Nigeria</span>
+    <span class="ticker-item"><span class="ticker-dot">&#x25C6;</span>Ginger</span>
+    <span class="ticker-item"><span class="ticker-dot">&#x25C6;</span>Sesame Seeds</span>
+    <span class="ticker-item"><span class="ticker-dot">&#x25C6;</span>Dry Hibiscus</span>
+    <span class="ticker-item"><span class="ticker-dot">&#x25C6;</span>Soya Beans</span>
+    <span class="ticker-item"><span class="ticker-dot">&#x25C6;</span>Raw Cashew Nuts</span>
+    <span class="ticker-item"><span class="ticker-dot">&#x25C6;</span>Groundnuts</span>
+    <span class="ticker-item"><span class="ticker-dot">&#x25C6;</span>Sun Flower</span>
+    <span class="ticker-item"><span class="ticker-dot">&#x25C6;</span>Maize</span>
+    <span class="ticker-item"><span class="ticker-dot">&#x25C6;</span>Soya Oil</span>
+    <span class="ticker-item"><span class="ticker-dot">&#x25C6;</span>Export Ready &middot; Abuja, Nigeria</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+
+<section class="section" id="about">
+  <div class="about-grid">
+    <div class="about-img-wrap reveal">
+      <div class="about-img">
+        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=900&q=80" alt="Nazim Farms agricultural operations" loading="lazy"/>
+      </div>
+      <div class="about-badge">
+        <div class="about-badge-n">100%</div>
+        <div class="about-badge-l">Nigerian Owned</div>
+      </div>
+    </div>
+    <div class="about-text reveal">
+      <p class="sec-eyebrow">Who We Are</p>
+      <h2 class="sec-h2">Elevate Your Agro Business with Nazim Farms</h2>
+      <p class="about-p">Nazim Farms and Agro Allied Limited was incorporated in Nigeria by Nigerians to provide first-class value-added services. We specialise in commodity trading of agricultural produce through the application of the latest technology equipment and quality standard services to our customers' satisfaction.</p>
+      <p class="about-p">From flavorful spices to nutritious soybean seeds, raw cashew nuts to exotic dry hibiscus flower &mdash; our diverse portfolio caters to the needs of valued customers worldwide. We take pride in our commitment to excellence, ensuring each product meets the highest standards of quality, freshness and purity.</p>
+      <div class="about-chips">
+        <span class="chip">&#x1F33F; Crop Production</span>
+        <span class="chip">&#x1F91D; Outgrower Programme</span>
+        <span class="chip">&#x2708;&#xFE0F; Export Specialists</span>
+        <span class="chip">&#x2699;&#xFE0F; Modern Equipment</span>
+        <span class="chip">&#x1F4CA; Commodity Trading</span>
+      </div>
+      <button class="btn btn-forest" data-goto="contact">Request a Quote &#8594;</button>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+
 <div id="stats">
-<div class="stat rv"><div class="stn">9</div><div class="stl">Premium Products</div></div>
-<div class="stat rv"><div class="stn">100%</div><div class="stl">Organic &amp; Pure</div></div>
-<div class="stat rv"><div class="stn">100%</div><div class="stl">Quality Assured</div></div>
-<div class="stat rv"><div class="stn">&#x1F1F3;&#x1F1EC;</div><div class="stl">Nigerian Owned</div></div>
+  <div class="stat reveal"><div class="stat-n" data-count="9" data-suffix="+">0</div><div class="stat-l">Products Exported</div></div>
+  <div class="stat reveal"><div class="stat-n" data-count="100" data-suffix="%">0</div><div class="stat-l">Organic &amp; Pure</div></div>
+  <div class="stat reveal"><div class="stat-n" data-count="500" data-suffix="+">0</div><div class="stat-l">Partner Farmers</div></div>
+  <div class="stat reveal"><div class="stat-n" data-count="100" data-suffix="%">0</div><div class="stat-l">Quality Assured</div></div>
 </div>
-<section class="sec" id="products">
-<div class="sechead rv"><div><p class="etag">Our Portfolio</p><h2 class="sh">Premium Agricultural Products</h2><p class="ssub">Every product sourced directly from verified Nigerian farmers, processed to international export standards.</p></div><button class="btn btn-f" data-goto="contact">Request Export Quote &#8594;</button></div>
-<div class="pfilts rv"><button class="pflt on" data-cat="all">All Products</button><button class="pflt" data-cat="spice">&#x1F336;&#xFE0F; Spices</button><button class="pflt" data-cat="seed">&#x1F33E; Seeds &amp; Grains</button><button class="pflt" data-cat="nut">&#x1F95C; Nuts</button><button class="pflt" data-cat="flower">&#x1F338; Botanicals</button></div>
-<div class="pgrid">
-<div class="pc rv" data-cat="spice" onclick="openModal('Ginger','Spice','https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=800&q=85&auto=format&fit=crop','Premium Nigerian ginger sun-dried to preserve its natural oils and potency. Bold flavour used in sauces, curry, confections and beverages globally.','Nigeria - North-West','Export Grade A','Spice / Condiment')"><div class="pcimg"><img src="https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=600&q=85&auto=format&fit=crop" alt="Ginger" loading="lazy"/><span class="pctag cs">Spice</span></div><div class="pcb"><h3 class="pcn">Ginger</h3><p class="pcd">Bold, biting flavour. Sun-dried to preserve natural oils. Used in sauces, curry, confections and beverages worldwide.</p><div class="pcf"><span class="pco">&#x1F1F3;&#x1F1EC; Nigeria</span><span class="pca">Details &#8594;</span></div></div></div>
-<div class="pc rv" data-cat="seed" onclick="openModal('Sesame Seeds','Seed','https://images.unsplash.com/photo-1612169998029-4f4c3c12e34f?w=800&q=85&auto=format&fit=crop','Nigerian sesame seeds prized for oil content and flavour. Rich in healthy fats and antioxidants. Available hulled or unhulled, cleaned to export grade.','Nigeria - Benue/Nasarawa','Export Grade A','Seed / Oil Crop')"><div class="pcimg"><img src="https://images.unsplash.com/photo-1612169998029-4f4c3c12e34f?w=600&q=85&auto=format&fit=crop" alt="Sesame Seeds" loading="lazy"/><span class="pctag cd">Seed</span></div><div class="pcb"><h3 class="pcn">Sesame Seeds</h3><p class="pcd">Prized for oil extraction and flavouring. Rich in healthy fats and antioxidants. Available hulled or unhulled.</p><div class="pcf"><span class="pco">&#x1F1F3;&#x1F1EC; Nigeria</span><span class="pca">Details &#8594;</span></div></div></div>
-<div class="pc rv" data-cat="flower" onclick="openModal('Dry Hibiscus Flower','Botanical','https://images.unsplash.com/photo-1596547609652-9cf5d8c76ea2?w=800&q=85&auto=format&fit=crop','Dried hibiscus (Zobo/Roselle) with deep crimson colour and tangy taste. Used in beverages, teas, jams and natural dyes. Carefully dried to preserve colour and flavour.','Nigeria - Kano/Kaduna','Premium Dried','Botanical / Beverage')"><div class="pcimg"><img src="https://images.unsplash.com/photo-1596547609652-9cf5d8c76ea2?w=600&q=85&auto=format&fit=crop" alt="Dry Hibiscus Flower" loading="lazy"/><span class="pctag cf">Botanical</span></div><div class="pcb"><h3 class="pcn">Dry Hibiscus Flower</h3><p class="pcd">Deep crimson Zobo/Roselle. Used in beverages, teas, jams and natural dyes. Dried to preserve colour.</p><div class="pcf"><span class="pco">&#x1F1F3;&#x1F1EC; Nigeria</span><span class="pca">Details &#8594;</span></div></div></div>
-<div class="pc rv" data-cat="seed" onclick="openModal('Soya Beans','Grain','https://images.unsplash.com/photo-1599408493551-b5c6f4b1c6a6?w=800&q=85&auto=format&fit=crop','High-protein Nigerian soya beans for food processing, feed and oil extraction. We also process soya oil in-house. All batches cleaned, graded and moisture-tested.','Nigeria - Benue/Kogi','Export Grade A','Grain / Oilseed')"><div class="pcimg"><img src="https://images.unsplash.com/photo-1599408493551-b5c6f4b1c6a6?w=600&q=85&auto=format&fit=crop" alt="Soya Beans" loading="lazy"/><span class="pctag cd">Grain</span></div><div class="pcb"><h3 class="pcn">Soya Beans</h3><p class="pcd">High-protein. Used in food processing, animal feed and oil extraction. Cleaned and moisture-tested to standards.</p><div class="pcf"><span class="pco">&#x1F1F3;&#x1F1EC; Nigeria</span><span class="pca">Details &#8594;</span></div></div></div>
-<div class="pc rv" data-cat="nut" onclick="openModal('Groundnuts (Peanuts)','Nut','https://images.unsplash.com/photo-1567892320421-4b4b6e72b29a?w=800&q=85&auto=format&fit=crop','Premium Nigerian groundnuts with rich flavour and high oil content. Used for peanut oil, peanut butter, snack foods and animal feed.','Nigeria - Kano/Kaduna','Export Grade A','Nut / Oil Crop')"><div class="pcimg"><img src="https://images.unsplash.com/photo-1567892320421-4b4b6e72b29a?w=600&q=85&auto=format&fit=crop" alt="Groundnuts (Peanuts)" loading="lazy"/><span class="pctag cn">Nut</span></div><div class="pcb"><h3 class="pcn">Groundnuts (Peanuts)</h3><p class="pcd">Rich flavour, high oil content from Northern Nigeria. Available in-shell or shelled for oil, butter and feed.</p><div class="pcf"><span class="pco">&#x1F1F3;&#x1F1EC; Nigeria</span><span class="pca">Details &#8594;</span></div></div></div>
-<div class="pc rv" data-cat="nut" onclick="openModal('Raw Cashew Nuts','Nut','https://images.unsplash.com/photo-1608797178974-15b35a64ede9?w=800&q=85&auto=format&fit=crop','Premium raw cashew nuts with high kernel output and low moisture. All batches aflatoxin-tested to international standards. Export grade W240.','Nigeria - Oyo/Cross River','Export Grade W240','Nut / Cashew')"><div class="pcimg"><img src="https://images.unsplash.com/photo-1608797178974-15b35a64ede9?w=600&q=85&auto=format&fit=crop" alt="Raw Cashew Nuts" loading="lazy"/><span class="pctag cn">Nut</span></div><div class="pcb"><h3 class="pcn">Raw Cashew Nuts</h3><p class="pcd">High kernel output, low moisture. Aflatoxin-tested, export grade W240. Ideal for processing.</p><div class="pcf"><span class="pco">&#x1F1F3;&#x1F1EC; Nigeria</span><span class="pca">Details &#8594;</span></div></div></div>
-</div></section>
-<section class="sec" id="services"><div class="sechead rv"><div><p class="etag">What We Do</p><h2 class="sh">Full-Service Agric Operations</h2><p class="ssub">From farm to export container &mdash; we manage the entire chain so your business gets only the best.</p></div></div><div class="sgrid">
-<div class="sc rv"><div class="scicon">&#x1F33E;</div><h3>Crop Production</h3><p>We produce soya beans, sunflowers, maize and more on managed farmlands using modern techniques and equipment.</p></div>
-<div class="sc rv"><div class="scicon">&#x1F91D;</div><h3>Outgrower Programme</h3><p>We partner directly with indigenous farmers, providing inputs, training and guaranteed offtake for their harvest.</p></div>
-<div class="sc rv"><div class="scicon">&#x2699;&#xFE0F;</div><h3>Processing &amp; Milling</h3><p>In-house processing of soya oil and agricultural produce using the latest technology for export readiness.</p></div>
-<div class="sc rv"><div class="scicon">&#x2708;&#xFE0F;</div><h3>Export &amp; Commodity Trading</h3><p>Full handling of documentation, phytosanitary certification, logistics and shipping for international buyers.</p></div>
-<div class="sc rv"><div class="scicon">&#x1F69C;</div><h3>Modern Farm Equipment</h3><p>Access to modern agricultural equipment for planting, harvesting and post-harvest handling.</p></div>
-<div class="sc rv"><div class="scicon">&#x1F4E6;</div><h3>Distribution &amp; Supply</h3><p>Direct distribution to local food processors, manufacturers and retailers across Nigeria.</p></div>
-</div></section>
-<section class="sec" id="whyus"><div class="rv"><p class="etag">Why Choose Us</p><h2 class="sh">Our Commitment to Excellence</h2><p class="ssub">We are more than commodity traders &mdash; stewards of quality, partners to farmers and guardians of Nigerian agricultural heritage.</p></div><div class="wgrid">
-<div class="wc rv"><div class="wnum">01</div><div class="wicon">&#x1F33F;</div><h3>Pure &amp; Organic</h3><p>We nurture each crop from seed to harvest. No harmful chemicals ever touch our produce.</p></div>
-<div class="wc rv"><div class="wnum">02</div><div class="wicon">&#x26A1;</div><h3>Always Fresh</h3><p>Farm-to-export freshness through proper post-harvest handling, cold storage and rapid logistics.</p></div>
-<div class="wc rv"><div class="wnum">03</div><div class="wicon">&#x1F3C6;</div><h3>Export Quality Standards</h3><p>Every batch tested for moisture, aflatoxin and foreign matter. International food safety standards every time.</p></div>
-</div></section>
-<section class="sec" id="team"><div class="sechead rv"><div><p class="etag">Leadership</p><h2 class="sh">The People Driving<br/>Nigerian Agriculture Forward</h2><p class="ssub">Banking expertise, commodity knowledge and operational excellence combined.</p></div></div><div class="tgrid">
-<div class="tc rv"><div class="tcbar"></div><div class="tcb"><div class="tcav">&#x1F468;&#x200D;&#x1F4BC;</div><div class="tcname">Muhammad Muhammad Nasir</div><span class="tcrole">Chairman, Board of Directors</span><div class="tcdiv"></div><p class="tcbio">A seasoned banker with wide knowledge in financial administration. His exposure to both local and international trade inspired the establishment of Nazim Farms. He also serves on the boards of other reputable establishments.</p><div class="tclinks"><button class="tcbtn" onclick="window.location='mai'+'lto:'+'Sambo2nasir'+'@'+'gmail.com'">&#x2709;&#xFE0F; Sambo2nasir@gmail.com</button><a class="tcbtn" href="tel:%2B2348033054019">&#x1F4DE; +234 803 305 4019</a></div></div></div>
-<div class="tc rv" style="transition-delay:.12s"><div class="tcbar"></div><div class="tcb"><div class="tcav">&#x1F468;&#x200D;&#x1F4B9;</div><div class="tcname">Modibbo Zubairu Usman</div><span class="tcrole">Executive Director</span><div class="tcdiv"></div><p class="tcbio">Wide knowledge across various agricultural commodities. Highly connected in the industry and exposed to both local and international commodity markets. A key driver of the company's trading and expansion strategy.</p><div class="tclinks"><button class="tcbtn" onclick="window.location='mai'+'lto:'+'zubairu.modibbo'+'@'+'gmail.com'">&#x2709;&#xFE0F; zubairu.modibbo@gmail.com</button><a class="tcbtn" href="tel:%2B2348113950938">&#x1F4DE; +234 811 395 0938</a></div></div></div>
-<div class="tc rv" style="transition-delay:.24s"><div class="tcbar"></div><div class="tcb"><div class="tcav">&#x1F468;&#x200D;&#x1F4BB;</div><div class="tcname">Sulaiman Mashood Adesina</div><span class="tcrole">Head of Operations</span><div class="tcdiv"></div><p class="tcbio">Head of Administration and Operations with wide administrative knowledge and deep exposure to Information Technology. Oversees all operational and logistics infrastructure ensuring seamless delivery.</p><div class="tclinks"><button class="tcbtn" onclick="window.location='mai'+'lto:'+'mrsa220'+'@'+'gmail.com'">&#x2709;&#xFE0F; mrsa220@gmail.com</button><a class="tcbtn" href="tel:%2B2348084878446">&#x1F4DE; +234 808 487 8446</a></div></div></div>
-</div></section>
-<section class="sec" id="contact"><div class="sechead rv"><div><p class="etag">Contact Us</p><h2 class="sh">Request a Quote or<br/>Send an Enquiry</h2><p class="ssub">Fill the form &mdash; WhatsApp opens automatically with your details pre-filled.</p></div></div>
-<div class="cgrid"><div class="rv"><h3 class="cih">Contact Information</h3>
-<div class="cii"><div class="ciico">&#x1F4DE;</div><div><div class="cilabel">Hotlines</div><a href="tel:+2348033054019" class="cival">+234 803 305 4019</a><a href="tel:+2348113950938" class="cival">+234 811 395 0938</a><a href="tel:+2348084878446" class="cival">+234 808 487 8446</a></div></div>
-<div class="cii"><div class="ciico">&#x1F4CD;</div><div><div class="cilabel">Office Address</div><span class="cival">Suite B9 &amp; B10 Royal Plaza, No 12 Fria Close<br/>Off Ademola Adetokumbo Crescent<br/>Wuse 2, Abuja &mdash; Nigeria</span></div></div>
-<div class="cii"><div class="ciico">&#x1F4E7;</div><div><div class="cilabel">Email</div><a href="#" onclick="window.location='mai'+'lto:'+'info'+'@'+'nazimfarmsagro.com.ng';return false" class="cival">info@nazimfarmsagro.com.ng</a><a href="#" onclick="window.location='mai'+'lto:'+'contact'+'@'+'nazimfarmsagro.com.ng';return false" class="cival">contact@nazimfarmsagro.com.ng</a></div></div>
-<div class="cii"><div class="ciico">&#x1F4AC;</div><div><div class="cilabel">WhatsApp</div><a href="#" data-wa class="cival">+234 803 305 4019 &mdash; Tap to Chat</a></div></div>
+
+<!-- PRODUCTS -->
+
+<section class="section" id="products">
+  <div class="sec-head reveal">
+    <div>
+      <p class="sec-eyebrow">Our Portfolio</p>
+      <h2 class="sec-h2">Premium Agricultural Products</h2>
+      <p class="sec-sub">Every product sourced directly from verified Nigerian farmers, processed to international export standards.</p>
+    </div>
+    <button class="btn btn-forest" data-goto="contact">Request Export Quote &#8594;</button>
+  </div>
+  <div class="pfilts reveal">
+    <button class="pfilt on" data-cat="all">All Products</button>
+    <button class="pfilt" data-cat="spice">&#x1F336;&#xFE0F; Spices</button>
+    <button class="pfilt" data-cat="seed">&#x1F33E; Seeds &amp; Grains</button>
+    <button class="pfilt" data-cat="nut">&#x1F95C; Nuts</button>
+    <button class="pfilt" data-cat="flower">&#x1F338; Botanicals</button>
+  </div>
+  <div class="prod-grid">
+    <div class="pcard reveal" data-cat="spice" onclick="openModal('Ginger','Spice','https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=700&q=80','Premium Nigerian ginger with a distinctively bold, biting flavour. Used in breads, sauces, curry dishes, confections, pickles and beverages. Our ginger is sun-dried and carefully processed to preserve its natural oils and maximum potency.','Nigeria &middot; North-West','Export Grade A','Spice / Condiment')">
+      <div class="pcard-img"><img src="https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=600&q=80" alt="Ginger" loading="lazy"/><span class="pcard-cat cat-spice">Spice</span></div>
+      <div class="pcard-body"><h3 class="pcard-name">Ginger</h3><p class="pcard-desc">Bold, biting flavour — sun-dried and processed to preserve natural oils. Used in sauces, confections, curry and beverages worldwide.</p><div class="pcard-foot"><span class="pcard-origin">&#x1F1F3;&#x1F1EC; Nigeria</span><span class="pcard-cta">View Details &#8594;</span></div></div>
+    </div>
+    <div class="pcard reveal" data-cat="seed" onclick="openModal('Sesame Seeds','Seed','https://images.unsplash.com/photo-1612169998029-4f4c3c12e34f?w=700&q=80','Grown since antiquity, our sesame seeds are prized for their oil content and flavouring properties. Rich in healthy fats, protein and antioxidants. Available hulled or unhulled, cleaned to international export grade.','Nigeria &middot; Benue / Nasarawa','Export Grade A','Seed / Oil Crop')">
+      <div class="pcard-img"><img src="https://images.unsplash.com/photo-1612169998029-4f4c3c12e34f?w=600&q=80" alt="Sesame Seeds" loading="lazy"/><span class="pcard-cat cat-seed">Seed</span></div>
+      <div class="pcard-body"><h3 class="pcard-name">Sesame Seeds</h3><p class="pcard-desc">Prized for oil extraction and flavouring. Rich in healthy fats and antioxidants. Available hulled or unhulled, cleaned to export grade.</p><div class="pcard-foot"><span class="pcard-origin">&#x1F1F3;&#x1F1EC; Nigeria</span><span class="pcard-cta">View Details &#8594;</span></div></div>
+    </div>
+    <div class="pcard reveal" data-cat="flower" onclick="openModal('Dry Hibiscus Flower','Botanical','https://images.unsplash.com/photo-1596547609652-9cf5d8c76ea2?w=700&q=80','Exotic dried hibiscus flowers (Zobo/Roselle) with a deep crimson colour and tangy, cranberry-like taste. Widely used in beverages, teas, jams and natural dyes. Carefully dried and packed to preserve natural colour and flavour.','Nigeria &middot; Kano / Kaduna','Premium Dried','Botanical / Beverage')">
+      <div class="pcard-img"><img src="https://images.unsplash.com/photo-1596547609652-9cf5d8c76ea2?w=600&q=80" alt="Hibiscus" loading="lazy"/><span class="pcard-cat cat-flower">Botanical</span></div>
+      <div class="pcard-body"><h3 class="pcard-name">Dry Hibiscus Flower</h3><p class="pcard-desc">Deep crimson, tangy flavour. Widely used in beverages, teas, jams and natural dyes. Carefully dried to preserve colour and taste.</p><div class="pcard-foot"><span class="pcard-origin">&#x1F1F3;&#x1F1EC; Nigeria</span><span class="pcard-cta">View Details &#8594;</span></div></div>
+    </div>
+    <div class="pcard reveal" data-cat="seed" onclick="openModal('Soya Beans','Grain / Seed','https://images.unsplash.com/photo-1599408493551-b5c6f4b1c6a6?w=700&q=80','High-protein Nigerian soya beans — one of our flagship crops. Used in food processing, animal feed and oil extraction. We also process soya oil in-house. All batches are cleaned, graded and moisture-tested to international standards.','Nigeria &middot; Benue / Kogi','Export Grade A','Grain / Oilseed')">
+      <div class="pcard-img"><img src="https://images.unsplash.com/photo-1599408493551-b5c6f4b1c6a6?w=600&q=80" alt="Soya Beans" loading="lazy"/><span class="pcard-cat cat-seed">Grain</span></div>
+      <div class="pcard-body"><h3 class="pcard-name">Soya Beans</h3><p class="pcard-desc">High-protein flagship crop. Used in food processing, animal feed and oil extraction. Cleaned, graded and moisture-tested to international standards.</p><div class="pcard-foot"><span class="pcard-origin">&#x1F1F3;&#x1F1EC; Nigeria</span><span class="pcard-cta">View Details &#8594;</span></div></div>
+    </div>
+    <div class="pcard reveal" data-cat="nut" onclick="openModal('Groundnuts (Peanuts)','Nut','https://images.unsplash.com/photo-1567892320421-4b4b6e72b29a?w=700&q=80','Premium Nigerian groundnuts with rich flavour and high oil content. Sourced directly from Northern Nigeria farmers. Used for peanut oil, peanut butter, snack foods and animal feed. Available in-shell or shelled, roasted or raw.','Nigeria &middot; Kano / Kaduna','Export Grade A','Nut / Oil Crop')">
+      <div class="pcard-img"><img src="https://images.unsplash.com/photo-1567892320421-4b4b6e72b29a?w=600&q=80" alt="Groundnuts" loading="lazy"/><span class="pcard-cat cat-nut">Nut</span></div>
+      <div class="pcard-body"><h3 class="pcard-name">Groundnuts (Peanuts)</h3><p class="pcard-desc">Rich flavour, high oil content from Northern Nigeria. Available in-shell or shelled. Used in peanut oil, peanut butter and animal feed.</p><div class="pcard-foot"><span class="pcard-origin">&#x1F1F3;&#x1F1EC; Nigeria</span><span class="pcard-cta">View Details &#8594;</span></div></div>
+    </div>
+    <div class="pcard reveal" data-cat="nut" onclick="openModal('Raw Cashew Nuts','Nut','https://images.unsplash.com/photo-1608797178974-15b35a64ede9?w=700&q=80','Premium raw cashew nuts harvested from farms across Southern and Middle Belt Nigeria. High kernel output ratio, low moisture content. Ideal for processing into cashew kernels, cashew nut shell liquid (CNSL) and snack foods. All batches aflatoxin-tested.','Nigeria &middot; Oyo / Cross River','Export Grade W240','Nut / Cashew')">
+      <div class="pcard-img"><img src="https://images.unsplash.com/photo-1608797178974-15b35a64ede9?w=600&q=80" alt="Cashew" loading="lazy"/><span class="pcard-cat cat-nut">Nut</span></div>
+      <div class="pcard-body"><h3 class="pcard-name">Raw Cashew Nuts</h3><p class="pcard-desc">High kernel output, low moisture. Ideal for kernel processing, CNSL and snack foods. Aflatoxin-tested, export grade W240.</p><div class="pcard-foot"><span class="pcard-origin">&#x1F1F3;&#x1F1EC; Nigeria</span><span class="pcard-cta">View Details &#8594;</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+
+<section class="section" id="services">
+  <div class="sec-head reveal">
+    <div>
+      <p class="sec-eyebrow">What We Do</p>
+      <h2 class="sec-h2">Full-Service Agric Operations</h2>
+      <p class="sec-sub">From farm to export container — we manage the entire chain so your business gets only the best.</p>
+    </div>
+  </div>
+  <div class="srv-grid">
+    <div class="scard reveal"><div class="scard-icon">&#x1F33E;</div><h3>Crop Production</h3><p>We produce soya beans, sunflowers, maize and more on our managed farmlands using modern techniques and equipment.</p></div>
+    <div class="scard reveal"><div class="scard-icon">&#x1F91D;</div><h3>Outgrower Programme</h3><p>We partner directly with indigenous farmers in rural communities, providing inputs, training and guaranteed offtake for their harvest.</p></div>
+    <div class="scard reveal"><div class="scard-icon">&#x2699;&#xFE0F;</div><h3>Processing &amp; Milling</h3><p>In-house processing of soya oil and agricultural produce using the latest technology — to ensure quality, consistency and export readiness.</p></div>
+    <div class="scard reveal"><div class="scard-icon">&#x2708;&#xFE0F;</div><h3>Export &amp; Commodity Trading</h3><p>We handle all documentation, phytosanitary certification, logistics and shipping for international buyers across Europe, Asia and the Middle East.</p></div>
+    <div class="scard reveal"><div class="scard-icon">&#x1F69C;</div><h3>Modern Farm Equipment</h3><p>Access to modern agricultural equipment for planting, harvesting and post-harvest handling — maximising yield and minimising losses.</p></div>
+    <div class="scard reveal"><div class="scard-icon">&#x1F4E6;</div><h3>Distribution &amp; Supply</h3><p>Direct distribution of agricultural produce to local food processors, manufacturers and retailers across Nigeria.</p></div>
+  </div>
+</section>
+
+<!-- WHY US -->
+
+<section class="section" id="whyus">
+  <div class="reveal">
+    <p class="sec-eyebrow">Why Choose Us</p>
+    <h2 class="sec-h2">Our Commitment to Excellence</h2>
+    <p class="sec-sub">We are more than commodity traders &mdash; we are stewards of quality, partners to farmers and guardians of Nigerian agricultural heritage.</p>
+  </div>
+  <div class="why-grid">
+    <div class="wcard reveal">
+      <div class="wcard-num">01</div>
+      <div class="wcard-icon">&#x1F33F;</div>
+      <h3>Pure &amp; Organic</h3>
+      <p>We nurture each crop from seed to harvest with care and reverence. Our commitment to organic practices means no harmful chemicals ever touch our produce.</p>
+    </div>
+    <div class="wcard reveal">
+      <div class="wcard-num">02</div>
+      <div class="wcard-icon">&#x26A1;</div>
+      <h3>Always Fresh</h3>
+      <p>Farm-to-export freshness preserved through proper post-harvest handling, cold storage and rapid logistics. What you receive is bursting with flavor and nutrition.</p>
+    </div>
+    <div class="wcard reveal">
+      <div class="wcard-num">03</div>
+      <div class="wcard-icon">&#x1F3C6;</div>
+      <h3>Export Quality Standards</h3>
+      <p>Every batch is tested for moisture, aflatoxin and foreign matter. We comply with international food safety standards for every shipment &mdash; every time.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+
+<section class="section" id="team">
+  <div class="sec-head reveal">
+    <div>
+      <p class="sec-eyebrow">Leadership</p>
+      <h2 class="sec-h2">The People Driving<br/>Nigerian Agriculture Forward</h2>
+      <p class="sec-sub">Banking expertise, commodity knowledge and operational excellence — combined to build Nigeria's premium agric export brand.</p>
+    </div>
+  </div>
+  <div class="team-grid">
+    <div class="tcard reveal">
+      <div class="tcard-bar"></div>
+      <div class="tcard-body">
+        <div class="tcard-av">&#x1F468;&#x200D;&#x1F4BC;</div>
+        <div class="tcard-name">Muhammad Muhammad Nasir</div>
+        <span class="tcard-role">Chairman, Board of Directors</span>
+        <div class="tcard-hr"></div>
+        <p class="tcard-bio">A seasoned banker with wide knowledge in financial administration. His exposure to both local and international trade inspired the establishment of Nazim Farms. He also serves on the boards of other reputable establishments.</p>
+        <div class="tcard-links">
+          <a class="tcard-link" href="#" onclick="window.location='mai'+'lto:'+'Sambo2nasir'+'@'+'gmail.com';return false">&#x2709;&#xFE0F; Sambo2nasir@gmail.com</a>
+          <a class="tcard-link" href="tel:+2348033054019">&#x1F4DE; +234 803 305 4019</a>
+        </div>
+      </div>
+    </div>
+    <div class="tcard reveal" style="transition-delay:.1s">
+      <div class="tcard-bar"></div>
+      <div class="tcard-body">
+        <div class="tcard-av">&#x1F468;&#x200D;&#x1F4B9;</div>
+        <div class="tcard-name">Modibbo Zubairu Usman</div>
+        <span class="tcard-role">Executive Director</span>
+        <div class="tcard-hr"></div>
+        <p class="tcard-bio">Wide knowledge across various agricultural commodities. Highly connected in the industry and well exposed to both local and international commodity markets. A key driver of the company&apos;s trading and expansion strategy.</p>
+        <div class="tcard-links">
+          <a class="tcard-link" href="#" onclick="window.location='mai'+'lto:'+'zubairu.modibbo'+'@'+'gmail.com';return false">&#x2709;&#xFE0F; zubairu.modibbo@gmail.com</a>
+          <a class="tcard-link" href="tel:+2348113950938">&#x1F4DE; +234 811 395 0938</a>
+        </div>
+      </div>
+    </div>
+    <div class="tcard reveal" style="transition-delay:.2s">
+      <div class="tcard-bar"></div>
+      <div class="tcard-body">
+        <div class="tcard-av">&#x1F468;&#x200D;&#x1F4BB;</div>
+        <div class="tcard-name">Sulaiman Mashood Adesina</div>
+        <span class="tcard-role">Head of Operations</span>
+        <div class="tcard-hr"></div>
+        <p class="tcard-bio">Head of Administration and Operations with wide administrative knowledge and deep exposure to Information Technology. Oversees all operational and logistics infrastructure ensuring seamless delivery.</p>
+        <div class="tcard-links">
+          <a class="tcard-link" href="#" onclick="window.location='mai'+'lto:'+'mrsa220'+'@'+'gmail.com';return false">&#x2709;&#xFE0F; mrsa220@gmail.com</a>
+          <a class="tcard-link" href="tel:+2348084878446">&#x1F4DE; +234 808 487 8446</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="section" id="contact">
+  <div class="sec-head reveal">
+    <div>
+      <p class="sec-eyebrow">Contact Us</p>
+      <h2 class="sec-h2">Request a Quote or<br/>Send an Enquiry</h2>
+      <p class="sec-sub">Fill the form below &mdash; WhatsApp opens automatically with your details pre-filled for instant response from our team.</p>
+    </div>
+  </div>
+  <div class="contact-grid">
+    <div class="reveal">
+      <h3 class="ci-h">Contact Information</h3>
+      <div class="ci-item"><div class="ci-ico">&#x1F4DE;</div><div><h4>Hotlines</h4><a href="tel:+2348033054019">+234 803 305 4019</a><a href="tel:+2348113950938">+234 811 395 0938</a><a href="tel:+2348084878446">+234 808 487 8446</a></div></div>
+      <div class="ci-item"><div class="ci-ico">&#x1F4CD;</div><div><h4>Office Address</h4><p>Suite B9 &amp; B10 Royal Plaza, No 12 Fria Close<br/>Off Ademola Adetokumbo Crescent<br/>Wuse 2, Abuja &mdash; Nigeria</p></div></div>
+      <div class="ci-item"><div class="ci-ico">&#x1F4E7;</div><div><h4>Email</h4><a href="#" onclick="window.location='mai'+'lto:'+'info'+'@'+'nazimfarmsagro.com.ng';return false">info@nazimfarmsagro.com.ng</a><a href="#" onclick="window.location='mai'+'lto:'+'contact'+'@'+'nazimfarmsagro.com.ng';return false">contact@nazimfarmsagro.com.ng</a></div></div>
+      <div class="ci-item"><div class="ci-ico">&#x1F4AC;</div><div><h4>WhatsApp</h4><a href="#" data-wa>+234 803 305 4019 &mdash; Tap to Chat</a></div></div>
+    </div>
+    <div class="reveal">
+      <div class="form-card">
+        <form id="enquiry-form">
+          <div class="frow">
+            <div class="fg"><label for="f-name">Full Name *</label><input type="text" id="f-name" placeholder="Your full name" required/></div>
+            <div class="fg"><label for="f-phone">Phone *</label><input type="tel" id="f-phone" placeholder="+234 xxx xxx xxxx" required/></div>
+          </div>
+          <div class="frow">
+            <div class="fg"><label for="f-email">Email</label><input type="email" id="f-email" placeholder="your@email.com"/></div>
+            <div class="fg"><label for="f-product">Product Interest</label>
+              <select id="f-product">
+                <option>Ginger</option>
+                <option>Sesame Seeds</option>
+                <option>Dry Hibiscus Flower</option>
+                <option>Soya Beans</option>
+                <option>Groundnuts (Peanuts)</option>
+                <option>Raw Cashew Nuts</option>
+                <option>Sunflower</option>
+                <option>Maize</option>
+                <option>Soya Oil</option>
+                <option>Multiple Products</option>
+              </select>
+            </div>
+          </div>
+          <div class="fg"><label for="f-qty">Quantity / Volume</label><input type="text" id="f-qty" placeholder="e.g. 20 MT, 1 x 40ft container..."/></div>
+          <div class="fg"><label for="f-msg">Message</label><textarea id="f-msg" placeholder="Destination country, delivery requirements, packaging preferences..."></textarea></div>
+          <button type="submit" class="submit-btn">Send Enquiry &amp; Open WhatsApp &#x1F33E;</button>
+          <p class="form-note">WhatsApp opens automatically with your enquiry pre-filled.</p>
+          <div id="form-ok">&#x2705; Sent! WhatsApp is opening &mdash; our team will respond promptly.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <div class="foot-brand-name">Nazim Farms &amp;<br/>Agro Allied Limited</div>
+      <p class="foot-about">Nigeria&rsquo;s premier agricultural commodity export company. From our farms and partner growers across Nigeria to markets worldwide.</p>
+      <div class="socials">
+        <button class="soc" data-wa title="WhatsApp">&#x1F4AC;</button>
+        <a class="soc" href="#" onclick="window.location='mai'+'lto:'+'info'+'@'+'nazimfarmsagro.com.ng';return false" title="Email">&#x2709;&#xFE0F;</a>
+      </div>
+    </div>
+    <div class="foot-col"><h4>Products</h4><ul>
+      <li><button data-goto="products">Ginger</button></li>
+      <li><button data-goto="products">Sesame Seeds</button></li>
+      <li><button data-goto="products">Hibiscus Flower</button></li>
+      <li><button data-goto="products">Soya Beans</button></li>
+      <li><button data-goto="products">Cashew Nuts</button></li>
+      <li><button data-goto="products">Groundnuts</button></li>
+    </ul></div>
+    <div class="foot-col"><h4>Services</h4><ul>
+      <li><button data-goto="services">Crop Production</button></li>
+      <li><button data-goto="services">Outgrower Programme</button></li>
+      <li><button data-goto="services">Processing</button></li>
+      <li><button data-goto="services">Export Trading</button></li>
+      <li><button data-goto="services">Distribution</button></li>
+    </ul></div>
+    <div class="foot-col"><h4>Company</h4><ul>
+      <li><button data-goto="about">About Us</button></li>
+      <li><button data-goto="team">Our Team</button></li>
+      <li><button data-goto="contact">Contact</button></li>
+      <li><button data-goto="contact">Get a Quote</button></li>
+    </ul></div>
+  </div>
+  <div class="foot-bottom">
+    <p>&copy; 2026 Nazim Farms &amp; Agro Allied Limited &middot; Abuja, Nigeria</p>
+    <p style="color:rgba(196,146,42,.75)">&#x1F1F3;&#x1F1EC; Nigerian Owned &middot; Globally Trusted</p>
+  </div>
+</footer>
+
+<!-- MODAL -->
+
+<div class="modal-bg" id="modal-bg" onclick="if(event.target===this)closeModal()">
+  <div class="modal-box">
+    <div class="modal-img" id="modal-img">
+      <button class="modal-x" onclick="closeModal()">&#10005;</button>
+    </div>
+    <div class="modal-body">
+      <p class="modal-cat-tag" id="modal-cat"></p>
+      <h2 id="modal-title"></h2>
+      <p id="modal-desc"></p>
+      <div class="modal-meta">
+        <div class="meta-box"><div class="meta-l">Origin</div><div class="meta-v" id="modal-origin"></div></div>
+        <div class="meta-box"><div class="meta-l">Grade</div><div class="meta-v" id="modal-grade"></div></div>
+        <div class="meta-box"><div class="meta-l">Category</div><div class="meta-v" id="modal-type"></div></div>
+      </div>
+      <div class="modal-acts">
+        <button class="btn btn-gold" data-goto="contact" onclick="closeModal()">Request Export Quote &#8594;</button>
+        <button class="btn btn-outline-g" onclick="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="rv"><div class="fw"><form id="eform">
-<div class="fr"><div class="fg"><label for="fn">Full Name *</label><input type="text" id="fn" placeholder="Your full name" required/></div><div class="fg"><label for="fp">Phone *</label><input type="tel" id="fp" placeholder="+234 xxx xxx xxxx" required/></div></div>
-<div class="fr"><div class="fg"><label for="fe">Email</label><input type="email" id="fe" placeholder="your@email.com"/></div><div class="fg"><label for="fpr">Product Interest</label><select id="fpr"><option>Ginger</option><option>Sesame Seeds</option><option>Dry Hibiscus Flower</option><option>Soya Beans</option><option>Groundnuts (Peanuts)</option><option>Raw Cashew Nuts</option><option>Sunflower</option><option>Maize</option><option>Soya Oil</option><option>Multiple Products</option></select></div></div>
-<div class="fg"><label for="fq">Quantity / Volume</label><input type="text" id="fq" placeholder="e.g. 20 MT, 1 x 40ft container..."/></div>
-<div class="fg"><label for="fm">Message</label><textarea id="fm" placeholder="Destination country, packaging, delivery requirements..."></textarea></div>
-<button type="submit" class="fsub">Send Enquiry &amp; Open WhatsApp &#x1F33E;</button>
-<p class="fnote">&#x1F4AC; WhatsApp opens automatically with your details pre-filled.</p>
-<div id="fok">&#x2705; Sent! WhatsApp is opening &mdash; our team will respond promptly.</div>
-</form></div></div></div></section>
-<footer><div class="fgrid"><div>
-<div class="flogo">Nazim Farms &amp;<br/>Agro Allied Limited</div>
-<p class="fdesc">Nigeria&rsquo;s premier agricultural commodity export company. From farms and partner growers across Nigeria to markets worldwide.</p>
-<div class="fsocials"><button class="fsoc" data-wa title="WhatsApp">&#x1F4AC;</button><button class="fsoc" onclick="window.location='mai'+'lto:'+'info'+'@'+'nazimfarmsagro.com.ng'" title="Email">&#x2709;&#xFE0F;</button></div>
-</div>
-<div class="fcol"><h4>Products</h4><ul>
-<li><button data-goto="products">Ginger</button></li>
-<li><button data-goto="products">Sesame Seeds</button></li>
-<li><button data-goto="products">Hibiscus Flower</button></li>
-<li><button data-goto="products">Soya Beans</button></li>
-<li><button data-goto="products">Cashew Nuts</button></li>
-<li><button data-goto="products">Groundnuts</button></li>
-</ul></div>
-<div class="fcol"><h4>Services</h4><ul>
-<li><button data-goto="services">Crop Production</button></li>
-<li><button data-goto="services">Outgrower Programme</button></li>
-<li><button data-goto="services">Processing</button></li>
-<li><button data-goto="services">Export Trading</button></li>
-<li><button data-goto="services">Distribution</button></li>
-</ul></div>
-<div class="fcol"><h4>Company</h4><ul>
-<li><button data-goto="about">About Us</button></li>
-<li><button data-goto="team">Our Team</button></li>
-<li><button data-goto="contact">Contact</button></li>
-<li><button data-goto="contact">Get a Quote</button></li>
-</ul></div>
-</div>
-<div class="fbot"><p>&copy; 2026 Nazim Farms &amp; Agro Allied Limited &middot; Abuja, Nigeria</p><p style="color:rgba(196,146,42,.65)">&#x1F1F3;&#x1F1EC; Nigerian Owned &middot; Globally Trusted</p></div></footer>
-<div class="mbg" id="mbg" onclick="if(event.target===this)closeModal()"><div class="mbox"><div class="mhero" id="mhero"><button class="mx" onclick="closeModal()">&#10005;</button></div><div class="mbody"><p class="mtag" id="mtag"></p><h2 id="mtitle"></h2><p id="mdesc"></p><div class="mmeta"><div class="mmi"><div class="mml">Origin</div><div class="mmv" id="morigin"></div></div><div class="mmi"><div class="mml">Grade</div><div class="mmv" id="mgrade"></div></div><div class="mmi"><div class="mml">Category</div><div class="mmv" id="mtype"></div></div></div><div class="mbtns"><button class="btn btn-g" data-goto="contact" onclick="closeModal()">Request Export Quote &#8594;</button><button class="btn btn-og" onclick="closeModal()">Close</button></div></div></div></div>
-<script>function openModal(n,cat,img,d,o,g,t){
-  document.getElementById('mhero').style.backgroundImage="linear-gradient(to top,rgba(4,8,3,.84),transparent),url('"+img+"')";
-  document.getElementById('mtag').textContent=cat;
-  document.getElementById('mtitle').textContent=n;
-  document.getElementById('mdesc').textContent=d;
-  document.getElementById('morigin').textContent=o;
-  document.getElementById('mgrade').textContent=g;
-  document.getElementById('mtype').textContent=t;
-  document.getElementById('mbg').classList.add('open');
+
+<script>
+function openModal(name,cat,img,desc,origin,grade,type){
+  document.getElementById('modal-img').style.backgroundImage="linear-gradient(to top,rgba(17,26,15,.78),transparent),url('"+img+"')";
+  document.getElementById('modal-cat').textContent=cat;
+  document.getElementById('modal-title').textContent=name;
+  document.getElementById('modal-desc').textContent=desc;
+  document.getElementById('modal-origin').textContent=origin;
+  document.getElementById('modal-grade').textContent=grade;
+  document.getElementById('modal-type').textContent=type;
+  document.getElementById('modal-bg').classList.add('open');
   document.body.style.overflow='hidden';
 }
 function closeModal(){
-  document.getElementById('mbg').classList.remove('open');
+  document.getElementById('modal-bg').classList.remove('open');
   document.body.style.overflow='';
 }
-document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeModal(); });
 </script>
-<script>(function(){
+
+<script>
+(function(){
 'use strict';
-/* Slideshow */
-var slides=document.querySelectorAll('.hslide');
-var dots=document.querySelectorAll('.hd');
-var cur=0;
-function go(n){
-  slides[cur].classList.remove('on');dots[cur].classList.remove('on');
-  cur=(n+slides.length)%slides.length;
-  slides[cur].classList.add('on');dots[cur].classList.add('on');
+
+var WA_NUM = '2348033054019';
+
+function waOpen(msg){
+  var text = msg || 'Hello! I found Nazim Farms & Agro Allied Limited online and would like to make an enquiry.';
+  window.open('https://wa.me/' + WA_NUM + '?text=' + encodeURIComponent(text), '_blank');
 }
-if(slides.length){
-  dots.forEach(function(d){d.addEventListener('click',function(){go(+d.getAttribute('data-i'));});});
-  setInterval(function(){go(cur+1);},5000);
-}
-/* Nav */
-var nav=document.getElementById('nav');
-function upNav(){
-  nav.classList.toggle('solid',window.scrollY>50);
-  var b=document.getElementById('btt');
-  if(b)b.classList.toggle('show',window.scrollY>400);
-}
-window.addEventListener('scroll',upNav,{passive:true});
-upNav();
-/* Goto */
-document.addEventListener('click',function(e){
-  var el=e.target.closest('[data-goto]');
-  if(!el)return;
-  e.preventDefault();
-  var t=el.getAttribute('data-goto');
-  var tgt=t==='top'?document.body:document.getElementById(t);
-  if(tgt)tgt.scrollIntoView({behavior:'smooth'});
-  document.getElementById('mob').classList.remove('open');
-});
-/* Menu */
-document.getElementById('nham').addEventListener('click',function(){document.getElementById('mob').classList.add('open');});
-document.getElementById('mob-x').addEventListener('click',function(){document.getElementById('mob').classList.remove('open');});
-/* Filter */
-document.querySelectorAll('.pflt').forEach(function(btn){
-  btn.addEventListener('click',function(){
-    document.querySelectorAll('.pflt').forEach(function(b){b.classList.remove('on');});
-    btn.classList.add('on');
-    var c=btn.getAttribute('data-cat');
-    document.querySelectorAll('.pc').forEach(function(p){
-      p.style.display=(c==='all'||p.getAttribute('data-cat')===c)?'':'none';
-    });
-  });
-});
-/* WhatsApp */
-function sendWA(){
-  var n=document.getElementById('fn')?document.getElementById('fn').value:'';
-  var p=document.getElementById('fp')?document.getElementById('fp').value:'';
-  var pr=document.getElementById('fpr')?document.getElementById('fpr').value:'';
-  var q=document.getElementById('fq')?document.getElementById('fq').value:'';
-  var m=document.getElementById('fm')?document.getElementById('fm').value:'';
-  var txt=[
-    'Greetings Nazim Farms & Agro Allied,',
-    '',
-    'I would like to enquire about your export products.',
-    '',
-    'Name: '+(n||'N/A'),
-    'Phone: '+(p||'N/A'),
-    'Product Interest: '+(pr||'N/A'),
-    'Quantity/Volume: '+(q||'N/A'),
-    'Notes: '+(m||'N/A'),
-    '',
-    'Please advise on availability, pricing and shipping terms.',
-    'Thank you.'
-  ];
-  window.open('https://wa.me/2348033054019?text='+encodeURIComponent(txt.join('\n')),'_blank');
-}
+
+/* \u2500\u2500 WhatsApp float \u2500\u2500 */
 document.querySelectorAll('[data-wa]').forEach(function(el){
-  el.addEventListener('click',function(e){e.preventDefault();sendWA();});
+  el.addEventListener('click', function(){ waOpen(); });
 });
-var form=document.getElementById('eform');
+
+/* \u2500\u2500 Smooth scroll \u2500\u2500 */
+function goTo(id){
+  if(id === 'top'){ window.scrollTo({top:0, behavior:'smooth'}); return; }
+  var el = document.getElementById(id);
+  if(!el) return;
+  window.scrollTo({top: el.getBoundingClientRect().top + window.pageYOffset - 68, behavior:'smooth'});
+}
+document.querySelectorAll('[data-goto]').forEach(function(el){
+  el.addEventListener('click', function(){
+    goTo(el.getAttribute('data-goto'));
+    closeMob();
+  });
+});
+
+/* \u2500\u2500 Mobile menu \u2500\u2500 */
+var mobMenu = document.getElementById('mob-menu');
+function openMob(){ if(mobMenu){ mobMenu.classList.add('open'); document.body.style.overflow='hidden'; } }
+function closeMob(){ if(mobMenu){ mobMenu.classList.remove('open'); document.body.style.overflow=''; } }
+var hamBtn = document.getElementById('ham');
+if(hamBtn) hamBtn.addEventListener('click', openMob);
+var mobClose = document.getElementById('mob-close');
+if(mobClose) mobClose.addEventListener('click', closeMob);
+if(mobMenu) mobMenu.addEventListener('click', function(e){ if(e.target===mobMenu) closeMob(); });
+
+/* \u2500\u2500 Nav scroll \u2500\u2500 */
+var navbar = document.getElementById('nav');
+var btt = document.getElementById('btt');
+window.addEventListener('scroll', function(){
+  if(navbar) navbar.classList.toggle('solid', window.pageYOffset > 50);
+  if(btt) btt.classList.toggle('show', window.pageYOffset > 300);
+}, {passive:true});
+
+/* \u2500\u2500 Product filter \u2500\u2500 */
+document.querySelectorAll('.pfilt').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var cat = btn.getAttribute('data-cat');
+    document.querySelectorAll('.pfilt').forEach(function(b){ b.classList.remove('on'); });
+    btn.classList.add('on');
+    document.querySelectorAll('.pcard').forEach(function(card){
+      card.style.display = (cat === 'all' || card.getAttribute('data-cat') === cat) ? '' : 'none';
+    });
+  });
+});
+
+/* \u2500\u2500 Contact form \u2500\u2500 */
+var form = document.getElementById('enquiry-form');
 if(form){
-  form.addEventListener('submit',function(e){
+  form.addEventListener('submit', function(e){
     e.preventDefault();
-    sendWA();
-    var ok=document.getElementById('fok');
-    if(ok)ok.style.display='block';
+    var name    = (form.querySelector('#f-name').value    || '').trim();
+    var email   = (form.querySelector('#f-email').value   || '').trim();
+    var phone   = (form.querySelector('#f-phone').value   || '').trim();
+    var product = form.querySelector('#f-product').value;
+    var qty     = (form.querySelector('#f-qty').value     || '').trim();
+    var msg     = (form.querySelector('#f-msg').value     || '').trim();
+    if(!name)  { alert('Please enter your name.');  return; }
+    if(!phone) { alert('Please enter your phone.'); return; }
+    var lines = [
+      'Product Enquiry \u2014 Nazim Farms & Agro Allied Limited',
+      '',
+      'Name: '    + name,
+      'Email: '   + (email || 'Not provided'),
+      'Phone: '   + phone,
+      'Product: ' + product,
+      'Quantity: '+ (qty || 'Not specified'),
+      '',
+      'Message: ' + (msg || 'No message'),
+      '',
+      'Sent via nazimfarmsagro.com.ng'
+    ];
+    waOpen(lines.join('\n'));
+    form.reset();
+    var ok = document.getElementById('form-ok');
+    if(ok){ ok.style.display='block'; setTimeout(function(){ ok.style.display='none'; }, 5000); }
   });
 }
-/* Reveal */
-if('IntersectionObserver' in window){
-  var obs=new IntersectionObserver(function(entries){
+
+/* \u2500\u2500 Scroll reveal \u2500\u2500 */
+if(window.IntersectionObserver){
+  var obs = new IntersectionObserver(function(entries){
     entries.forEach(function(e){
-      if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}
+      if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); }
     });
-  },{threshold:0.07,rootMargin:'0px 0px -20px 0px'});
-  document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
-}else{
-  document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in');});
+  }, {threshold:0.07});
+  document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
+} else {
+  document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
 }
+
+/* \u2500\u2500 Counters \u2500\u2500 */
+var counted = false;
+var statsEl = document.getElementById('stats');
+if(statsEl && window.IntersectionObserver){
+  var cObs = new IntersectionObserver(function(entries){
+    if(entries[0].isIntersecting && !counted){
+      counted = true;
+      document.querySelectorAll('[data-count]').forEach(function(el){
+        var end    = parseInt(el.getAttribute('data-count'), 10);
+        var suffix = el.getAttribute('data-suffix') || '+';
+        var n = 0;
+        var step = Math.max(end / 60, 1);
+        var t = setInterval(function(){
+          n = Math.min(n + step, end);
+          el.textContent = Math.floor(n) + (n >= end ? suffix : '');
+          if(n >= end) clearInterval(t);
+        }, 20);
+      });
+    }
+  }, {threshold:0.3});
+  cObs.observe(statsEl);
+}
+
 })();
+
 </script>
-</body></html>
+
+</body>
+</html>
